@@ -1,0 +1,19 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" class="dh-notification-toastr" [style.display]="state.value === 'inactive' ? 'none' : 'flex'">
+  <div [fxFlex]="tConfig.closeButton ? '350px' : 100" fxFlex.xs="90" fxFlex.sm="90" fxLayout="column" fxLayoutAlign="center start">
+      <div fxFlex="auto" class="fw-6" *ngIf="title" [class]="tConfig.titleClass" [attr.aria-label]="title" [ngClass]="{
+      success: title == 'success',
+      error: title == 'error'
+    }">
+          {{ title | titlecase }}
+      </div>
+      <div fxFlex="auto" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+          <div fxFlex="10" *ngIf="tConfig.extra?.showProfile">i</div>
+          <div [fxFlex]="tConfig.extra?.showProfile ? '90' : '100'" [class]="tConfig.messageClass" [attr.aria-label]="message">
+              {{ message }}
+          </div>
+      </div>
+  </div>
+  <div fxFlex="30px" fxFlex.xs="10" fxFlex.sm="10" *ngIf="tConfig.closeButton" fxLayoutAlign="center center">
+      <span class="close__btn" (click)="remove()">&times;</span>
+  </div>
+</div>

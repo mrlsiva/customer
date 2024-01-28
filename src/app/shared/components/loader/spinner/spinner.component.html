@@ -1,0 +1,13 @@
+<div class="qdo365-loader">
+    <div [ngClass]="{'overlay': true}">
+        <div class="bg-overlay"></div>
+        <!-- <div class="loader"> -->
+        <!-- <div class="nest"></div> -->
+        <!-- <div class="spinner"></div> -->
+          <div class="loader"></div>
+          <!-- </div> -->
+          <div class="spinner-message" *ngIf="text && text !== ''">
+            {{text}}
+          </div>
+    </div>
+</div>

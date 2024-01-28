@@ -1,0 +1,95 @@
+<div class="about-us" fxLayout="column" fxLayoutAlign="end start">
+    <div class="container" fxLayout="column">
+        <div class="title">About Us </div>
+        <div class="sub-title">We Build Bridges</div>
+        <div class="sub-title">between merchants and customers</div>
+        <button fxHide.lg fxHide.md fxHide.xl fxShow.xs fxShow.sm fxLayout="column" fxLayoutAlign="center center">Partner with us</button>
+    </div>
+</div>
+<div class="container ">
+    <div class="football">
+        <h2>Elevating Your Brand’s Reach with a surge in customer Footfall</h2>
+        <p>At QDO, we recognize the obstacles businesses encounter in today's highly competitive market. That's why we've developed a revolutionary platform that seamlessly connects offline and online activities, empowering brands to enhance their visibility.
+            With the QDO platform, we provide you with the tools to craft customized offers and promotions that perfectly align with your business and target audience. By leveraging the power of the digital landscape, we bridge the gap between your offline
+            presence and the vast opportunities available online.We provide a comprehensive suite of features designed to streamline your marketing efforts, maximizing your brand's potential.</p>
+    </div>
+
+</div>
+<div class="co-founder">
+    <div class="inner" fxLayout="column">
+        <div class="title">A letter from our </div>
+        <div class="title co">Co-Founder</div>
+        <button (click)="openDialog()">Read letter</button>
+    </div>
+</div>
+<div class="container-fluid tab" fxLayout="column" fxLayoutGap="61px">
+    <div class="container tab-section" fxLayout="row" fxHide.xs fxHide.sm>
+        <div fxFlex="50" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="20px">
+            <div class="cp" *ngFor="let button of buttonObj">
+                <div fxLayout="row" fxLayoutGap="23px" class="" [class.active]="viewMode==button.code" (click)="partnerClicked(button.id)">
+                    <div class="line"></div>
+                    <div fxLayout="column">
+                        <h2>{{button.name}}</h2>
+                        <p>{{button.subname}} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-section" fxFlex="50" fxLayout="column" [ngSwitch]="viewMode">
+            <section *ngSwitchCase="getViewMode()" fxLayout="column">
+                <img class="card" src="../../../../assets/images/about-us/tab/{{selectedViewDetails.id}}.png">
+            </section>
+        </div>
+    </div>
+    <div fxLayout="column" class="tab-section active" fxLayoutGap="40px" fxHide.md fxHide.xl fxHide.lg>
+        <h2 class="text-center">We are strong at</h2>
+        <div fxLayout="column" *ngFor="let button of buttonObj">
+            <h2>{{button.name}}</h2>
+            <p>{{button.subname}} </p>
+            <img class="card" src="../../../../assets/images/about-us/tab/{{button.id}}.png">
+        </div>
+    </div>
+</div>
+<div class="container-fluid connect">
+    <div class="container" fxLayout="column">
+        <div class="connect-item" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="50" fxFlex.xs="auto" fxFlex.xs="auto" fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center" fxLayoutGap="10px">
+                <h2>Connect with Customers</h2>
+                <div fxHide.md fxHide.xl fxHide.lg><img src="../../../../assets/images/about-us/connect/1.png"></div>
+                <p>QDO offers innovative ways for customers to engage with brands. Through QDO Box, Fleet, Online offers & promotions, and Board, customers can discover, connect, and interact with businesses in unique and exciting ways. Join QDO to foster
+                    lasting relationships and create memorable experiences for your customers</p>
+            </div>
+            <div fxFlex="50" fxHide.xs fxHide.xs fxLayout="column" fxLayoutAlign="center center">
+                <img src="../../../../assets/images/about-us/connect/1.png">
+            </div>
+        </div>
+        <div class="connect-item" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="50" fxHide.xs fxHide.xs fxFlex.xs="auto" fxFlex.xs="auto" fxLayout="column" fxLayoutAlign="center center">
+                <img src="../../../../assets/images/about-us/connect/2.png">
+            </div>
+            <div fxFlex="50" fxFlex.xs="auto" fxFlex.xs="auto" fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center" fxLayoutGap="10px">
+                <h2>User - Friendly Experience</h2>
+                <div fxHide.md fxHide.xl fxHide.lg><img src="../../../../assets/images/about-us/connect/2.png"></div>
+                <p>QDO ensures a user-friendly experience, even for non-technical users. With just a few clicks, you can effortlessly create and manage offers. Our analytics tools provide valuable insights to track campaign success. Enjoy simplicity and
+                    power with QDO</p>
+            </div>
+
+        </div>
+        <div class="connect-item" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="50" fxFlex.xs="auto" fxFlex.xs="auto" fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center" fxLayoutGap="10px">
+                <h2>Boost Your Brand’s Visibility</h2>
+                <div fxHide.md fxHide.xl fxHide.lg><img src="../../../../assets/images/about-us/connect/3.png"></div>
+                <p>QDO accelerates your brand's visibility with effortless growth, irrespective of your technical know-how. Our user-friendly platform enables you to create and manage offers with ease, just a few clicks away. Gain valuable insights from
+                    our analytics tools to track the success of your campaigns, empowering you to make data-driven decisions for optimal brand expansion. Experience the seamless simplicity of QDO and propel your business to new heights.</p>
+            </div>
+            <div fxFlex="50" fxHide.xs fxHide.xs fxFlex.xs="auto" fxFlex.xs="auto" fxLayout="column" fxLayoutAlign="center center">
+                <img src="../../../../assets/images/about-us/connect/3.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid shop" fxLayout="column" fxLayoutAlign="center center">
+    <h2>Come Redefine shopping with us!</h2>
+    <button routerLink="/home">Partner with us</button>
+</div>

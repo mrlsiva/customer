@@ -1,0 +1,61 @@
+@import "../../../../../assets/scss/variables.scss";
+@import "../../../../../assets/scss/mixins/breakpoint.scss";
+.main-site {
+    height: 100vh;
+    width: 100%;
+    background: #FFF;
+    & .main-body {
+        height: 100%;
+    }
+}
+// .main-site {
+//     & qdo365-main-nav {
+//         position: absolute;
+//         top: 0;
+//         width: 100%;
+//         z-index: 999;
+//     }
+//     &-content {
+//         position: relative;
+//         min-height: 100%;
+//         overflow-y: auto;
+//         @include breakpoint("xs") {
+//             max-height: 100vh;
+//         }
+//         @include breakpoint("sm") {
+//             max-height: 100vh;
+//         }
+//         @include breakpoint("md") {
+//             max-height: calc(100vh - 70px);
+//         }
+//         & .main-body {
+//             // max-width: calc(1280px - 30px);
+//             // padding: 0 15px;
+//             // width: calc(100% - 30px);
+//             // margin: 0 auto;
+//             width: 100%;
+//             &.dashboard {
+//                 background: #FFF6EF;
+//             }
+//         }
+//         & .footer {
+//             width: 100%;
+//             max-width: 100%;
+//         }
+//     }
+//     & .sidenavshow {
+//         position: absolute;
+//         top: 0;
+//         z-index: 100;
+//         height: 100vh;
+//         width: 100%;
+//         min-height: 100vh;
+//         background-color: #fff;
+//         @include breakpoint("xs") {
+//             z-index: 9999;
+//         }
+//         @include breakpoint("sm") {
+//             z-index: 9999;
+//         }
+//     }
+// }

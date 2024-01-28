@@ -1,0 +1,43 @@
+.side-nav {
+    width: 100%;
+    &-header {
+        height: 104px;
+        padding: 0 20px;
+        background-color: var(--orange-icon-fill, #FF7A22);
+    }
+    & .close {
+        & button {
+            background: transparent;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+    &-body {
+        height: calc(100vh - 255px);
+        overflow: auto;
+        padding-top: 60px;
+        & a {
+            color: rgba(255, 122, 34, 0.70);
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 48px;
+            &.active {
+                color: #FF7A22;
+            }
+        }
+    }
+    &-footer {
+        & .line {
+            width: 59px;
+            height: 1px;
+            background-color: #FF7A22;
+            margin: 0 auto;
+        }
+        & .social-icon {
+            height: 150px;
+        }
+    }
+}

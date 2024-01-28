@@ -1,0 +1,167 @@
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+.steps {
+    &-body {
+        &.text-center {
+            text-align: center;
+        }
+        margin-top: 20px;
+        & .title {
+            color: #1D1D1D;
+            font-size: 24px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 31.76px;
+            text-transform: capitalize;
+            // margin-bottom: 20px;
+        }
+        & .price-details {
+            max-width: 330px;
+            margin: 10px auto;
+            padding-right: 24px;
+            & .mt-20 {
+                margin-top: 22px;
+            }
+            & .mt-10 {
+                margin-top: 11px;
+            }
+            & .mb-20 {
+                margin-bottom: 22px;
+            }
+            & .bb-1 {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #000;
+            }
+            & .amount {
+                color: #000;
+                text-align: center;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                &.f-10 {
+                    font-size: 10px;
+                }
+                &.fw-600 {
+                    font-weight: 600;
+                }
+                &.fw-700 {
+                    font-weight: 700;
+                }
+                & button {
+                    border-radius: 4px;
+                    border: 0.5px solid #000;
+                    background: #D9D9D9;
+                    margin-bottom: 8px;
+                    color: var(--black-text, #343434);
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                & span {
+                    color: var(--pink-fill, #FE3152);
+                    font-size: 10px;
+                    &.line {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+        & .detail {
+            &s {
+                & div {
+                    color: #101820;
+                    font-size: 16px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    & span {
+                        color: #FE3152;
+                        font-weight: 700;
+                    }
+                }
+                &-img {
+                    position: relative;
+                    max-height: 28px;
+                    &:hover {
+                        & .box {
+                            opacity: 1;
+                        }
+                    }
+                    & img {
+                        width: 28px;
+                        // &:hover {
+                        //     & .box {
+                        //         opacity: 1;
+                        //     }
+                        // }
+                    }
+                    & .box {
+                        position: absolute;
+                        opacity: 0;
+                        border-radius: 4px;
+                        background: #FE3152;
+                        width: 222px;
+                        padding: 20px 13px;
+                        color: var(--white-pale-background, rgba(255, 255, 255, 0.90));
+                        font-size: 12px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        top: 4px;
+                        left: 16px;
+                        @include breakpoint("xs") {
+                            top: 4px;
+                            left: -238px;
+                        }
+                        @include breakpoint("sm") {
+                            top: 4px;
+                            left: -238px;
+                        }
+                        &.right {
+                            top: 4px;
+                            left: -238px;
+                        }
+                    }
+                }
+            }
+        }
+        & .payment {
+            max-width: 330px;
+            margin: 0 auto;
+            &-method {
+                border-radius: 4px;
+                border: 0.5px solid #FE3152;
+                max-width: 50%;
+                margin-right: 24px;
+                height: 100px;
+                margin-bottom: 24px;
+                &:hover {
+                    background-color: rgba(255, 227, 209, 0.60);
+                    cursor: pointer;
+                }
+                &.active {
+                    background-color: rgba(255, 227, 209, 0.60);
+                }
+                & img {
+                    width: 60px;
+                    margin-bottom: 10px;
+                }
+                & span {
+                    color: #979797;
+                    font-size: 10px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

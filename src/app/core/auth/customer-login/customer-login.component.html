@@ -1,0 +1,15 @@
+<div class="login" fxLayout="row">
+    <div class="login-image" fxLayout="column" fxLayoutAlign="center center" fxFlex="50">
+        <ngx-slick-carousel class="login-slider" fxFlexFill #slickModal="slick-carousel" [config]="slideConfig" >
+            <div ngxSlickItem class="column" class="slider" *ngFor="let user of users">
+                <img [src]="'../../../../assets/images/login/'+user.src">
+                <div class="title">{{user.title}}</div>
+                <div class="sub">{{user.sub}}</div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+    <div fxFlex="50" fxLayout="column" fxLayoutAlign="center center">
+        <qdo365-login class="w-100" fxLayout="column" fxLayoutAlign="center center"></qdo365-login>
+        <!-- <qdo365-categories class="w-100" fxLayout="column" fxLayoutAlign="center center"></qdo365-categories> -->
+    </div>
+</div>

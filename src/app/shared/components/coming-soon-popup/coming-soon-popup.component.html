@@ -1,0 +1,16 @@
+<div fxLayout="column" class="popup-bg-custom" *ngIf="!data?.isOffer">
+    <div fxLayout="row" fxLayoutAlign="end center">
+        <button mat-dialog-close (click)="close()">
+      <img src="../../../../assets/images/payment/close.svg" width="21px">
+    </button>
+    </div>
+    <div class="content">This feature is under development and is coming soon</div>
+</div>
+<div fxLayout="column" class="popup-bg-custom" *ngIf="data?.isOffer">
+  <div fxLayout="row" fxLayoutAlign="end center">
+      <button mat-dialog-close (click)="close()">
+    <img src="../../../../assets/images/payment/close.svg" width="21px">
+  </button>
+  </div>
+  <div class="content">Your Offer create limit exceed...</div>
+</div>

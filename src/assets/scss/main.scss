@@ -1,0 +1,141 @@
+@import "./variables.scss";
+@import "./scrollbar.scss";
+@import "./animation.scss";
+@import "./mixins/breakpoint.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --dh-grey: #{$qdo365-color-friargray};
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    height: -webkit-fill-available;
+    height: 100vh;
+    @extend .custom-scroll;
+    @include breakpoint("xs") {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    @include breakpoint("sm") {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+    @include breakpoint("md") {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(0deg, #FFD8C3 9.05%, #FFEDE6 51.12%);
+    min-height: 100vh;
+    height: 100vh;
+    height: -webkit-fill-available;
+}
+
+body,
+.mat-h1,
+.mat-headline,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline,
+.mat-typography h1,
+.mat-body,
+.mat-body-1,
+.mat-typography .mat-body,
+.mat-typography .mat-body-1,
+.mat-typography,
+.mat-h3,
+.mat-subheading-2,
+.mat-typography .mat-h3,
+.mat-typography .mat-subheading-2,
+.mat-typography h3,
+.mat-expansion-panel-header,
+.mat-form-field,
+.mat-card,
+.mat-select,
+.mat-button,
+.mat-raised-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button,
+.mat-fab,
+.mat-mini-fab,
+button,
+.mat-table,
+textarea,
+div, span, .mat-step-text-label {
+    font-family: 'Poppins', sans-serif !important;
+    font: 400 14px / 20px Poppins, "Poppins", sans-serif;
+}
+
+.w-100 {
+    width: 100%;
+    .slick-slide,
+    .slick-track {
+        width: 100% !important;
+    }
+}
+.error-msg {
+    font-size: 14px;
+    line-height: 17px;
+    color: #FE3152;
+    margin: 5px 0;
+}
+.success-msg {
+    font-size: 14px;
+    line-height: 17px;
+    color:#198754;
+    margin: 5px 0;
+}
+.popup-bg-custom {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    @include breakpoint("xs") {
+        padding: 16px;
+    }
+    @include breakpoint("sm") {
+        padding: 16px;
+    }
+}
+
+.mat-paginator-page-size-label {
+  order: 2;
+  margin-left: 30px !important;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.login-slider  {
+    & .slick-list.draggable {
+        // height: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center;
+        align-items: center;
+    }
+    & .slick-dots li {
+        margin: 0;
+    }
+    & .slick-dots li.slick-active button:before {
+        color: #FE3152;
+    }
+    & .slick-dots li button:before {
+        color: #FE3152;
+        font-size: 12px;
+    }
+    & .slick-dots {
+        position: inherit;
+    }
+}

@@ -1,0 +1,27 @@
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+@import "../../../../assets/scss/scrollbar.scss";
+@import "../../../../assets/scss/mixins/btn.scss";
+.terms {
+    // max-height: 90vh;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    background-color: #fff;
+    padding: 30px;
+    @extend .custom-scroll-thin;
+    // width: 100%;
+    & .title {
+        padding-bottom: 30px;
+    }
+    & .header {
+        text-align: center;
+    }
+    h2 {
+        margin: 0;
+    }
+    h2 {
+        padding-bottom: 20px;
+        &.no-padding {
+            padding-bottom: 0;
+        }
+    }
+}

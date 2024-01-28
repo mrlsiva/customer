@@ -1,0 +1,11 @@
+<section fxLayout="row" fxLayoutAlign="center center" class="alert">
+    <div>
+        <div mat-dialog-content fxLayout="row" fxLayoutAlign="space-around center">
+            {{message}}
+        </div>
+        <div mat-dialog-actions fxLayout="row" fxLayoutAlign="center center">
+            <button mat-raised-button color="primary" (click)="onConfirmClick()" tabindex="1">{{confirmButtonText}}</button>
+            <button mat-raised-button mat-dialog-close tabindex="-1">{{cancelButtonText}}</button>
+        </div>
+    </div>
+</section>

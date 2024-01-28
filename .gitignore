@@ -1,0 +1,17 @@
+node_modules
+.angular
+reference.txt
+src11
+dist
+
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Config Files
+src/environments/*
+!src/environments/.keep
+.env
+.env-*
+!.env-docker

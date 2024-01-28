@@ -1,0 +1,22 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/utils.scss';
+@import '../../../../assets/scss/mixins/design-util.scss';
+@import '../../../../assets/scss/mixins/unit-conversion.scss';
+.dh-notification-toastr {
+    $width: convert(236, px, ems);
+    font-size: convert(12, px, ems);
+    background: $qdo365-color-white;
+    color: $qdo365-color-black;
+    @extend .pa-1;
+    @include draw-border(thin, solid);
+    & .close__btn {
+        @extend .cp;
+        font-size: convert(32, px, ems);
+    }
+    & .success {
+        color: $qdo365-color-green;
+    }
+    & .error {
+        color: $qdo365-color-red;
+    }
+}

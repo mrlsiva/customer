@@ -1,0 +1,60 @@
+@import "../variables.scss";
+button {
+    outline: none;
+    border: none;
+    width: fit-content;
+    border-radius: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0 20px;
+    &.btn {
+        border-radius: 5px;
+        height: 50px;
+        font-size: 14px;
+        line-height: 50px;
+        letter-spacing: .1px;
+        color: $qdo365-color-blue;
+        // background: $qdo365-app-color;
+        font-weight: 600;
+        &.outline {
+            background-color: transparent;
+            color: $qdo365-color-white;
+            &.white {
+                border: 1px solid $qdo365-color-white;
+            }
+            &.gray {
+                border: 1px solid #606060;
+                color: #606060;
+            }
+            &.orange {
+                border: 1px solid $qdo365-app-color-primary;
+                color: $qdo365-app-color-primary;
+                background-color: transparent;
+            }
+        }
+        &.fill {
+            background-color: $qdo365-app-color;
+            color: $qdo365-color-white;
+        }
+        &.orange {
+            background-color: $qdo365-app-color-primary;
+            color: $qdo365-color-white;
+        }
+        &.small {
+            height: 34px;
+            line-height: 34px;
+        }
+        &.w-100 {
+            width: 100%;
+        }
+        &.micro {
+            height: 20px;
+            line-height: 20px;
+            font-size: 10px;
+        }
+    }
+    &.disable {
+        background-color: $qdo365-inactive-color !important;
+        color: $qdo365-color-white !important;
+    }
+}

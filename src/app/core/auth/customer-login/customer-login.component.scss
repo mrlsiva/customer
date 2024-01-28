@@ -1,0 +1,173 @@
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+@import "../../../../assets/scss/mixins/btn.scss";
+
+.login {
+    height: 100%;
+    &-image {
+        background: #FFF0F3;
+        height: 100%;
+    }
+    & .title, & .sub { 
+        color: #343434;
+        text-align: center;
+        max-width: 400px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    & .title {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 23px;
+    }
+    & .sub {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    &-inputs {
+        width: 100%;
+        max-width: 448px;
+        @include breakpoint("xs") {
+            width: 90%;
+        }
+        @include breakpoint("sm") {
+            width: 90%;
+        }
+        & .welcome {
+            color: #343434;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            &.primary {
+                color: #FE3152;
+                font-weight: 700;
+                font-size: 32px
+            }
+        }
+        & .access {
+            color: #343434;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%;
+        }
+        & .categories {
+            & .product {
+                border-radius: 4px;
+                background: #ECF2F7;
+                width: fit-content;
+                padding: 16px 12px;
+                &-name {
+                    color: #7B8389;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 170%;
+                }
+            }
+        }
+        & .sign-up {
+            width: 100%;
+            & a {
+                color: #343434;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                &.blue {
+                    color: #18A0FB;
+                    cursor: pointer;
+                }
+            }
+        }
+        & .button {
+            width: 100%;
+            & .agree {
+                color: #343434;
+                text-align: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                & a {
+                    color: #18A0FB;
+                }
+            }
+        }
+        
+        & .input-section {
+            width: 100%;
+            & .label-name {
+                color: #343434;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            & .input-area {
+                height: 52px;
+                border-radius: 4px;
+                background: #ECF2F7;
+                padding: 18px 22px;
+                & input {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    height: 52px;
+                    background-color: transparent;
+                    color: #222;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 170%;
+                    &::placeholder {
+                        color: #7B8389;
+                    }
+                }
+                
+                & a {
+                    min-width: 36px;
+                    cursor: pointer;
+                    color: #7B8389;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 170%;
+                    &.otp {
+                        color: #FE3152;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 170%;
+                        text-wrap: nowrap;
+                    }
+                }
+            }
+            & .forgot {
+                color: #18A0FB;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+}
+.slick-slide img {
+    margin: 0 auto;
+    max-height: 400px;
+    margin-bottom: 23px;
+}
+.slick-slide {
+    text-align: center;
+}

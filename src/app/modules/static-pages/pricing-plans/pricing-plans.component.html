@@ -1,0 +1,458 @@
+<div class="bg">
+    <div class="plans container" fxLayout="column" fxLayoutAlign="start center">
+        <div class="plans-timer" fxLayout="column" fxLayoutAlign="start center">
+            <div class="title">QDO <br fxHide.md fxHide.lg fxHide.xl> Your Business Partner</div>
+            <div class="time" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="start start" fxLayoutAlign.sm="start start" fxLayoutGap="26px" fxLayoutGap.xs="12px" fxLayoutGap.sm="12px">
+                <div fxFlex="80px" fxFlex.xs="40px" fxFlex.sm="40px" class="box">
+                    <img src="../../../../assets/images/plans/Timer.svg">
+                </div>
+                <div fxFlex="110px" fxFlex.xs="54px" fxFlex.sm="54px" class="box" fxLayout="column" fxLayoutAlign="center center">
+                    <input placeholder="04" readonly>
+                    <span>Day</span>
+                </div>
+                <div fxFlex="110px" fxFlex.xs="54px" fxFlex.sm="54px" class="box" fxLayout="column" fxLayoutAlign="center center">
+                    <input placeholder="22" readonly>
+                    <span>Hour</span>
+                </div>
+                <div fxFlex="110px" fxFlex.xs="54px" fxFlex.sm="54px" class="box" fxLayout="column" fxLayoutAlign="center center">
+                    <input placeholder="22" readonly>
+                    <span>Minute</span>
+                </div>
+                <div fxFlex="80px" fxFlex.xs="40px" fxFlex.sm="40px" class="box">
+                    <img src="../../../../assets/images/plans/Timer.svg">
+                </div>
+            </div>
+            <div class="exclusive" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="start start" fxLayoutAlign.sm="start start" fxLayoutGap="2px">
+                <div class="">
+                    <img src="../../../../assets/images/plans/1-star.svg">
+                </div>
+                <div class="exclusive-offer">Exclusive Offer just for you !</div>
+                <div class="">
+                    <img src="../../../../assets/images/plans/2-star.svg">
+                </div>
+            </div>
+        </div>
+        <div class="plans-started container" fxLayout="column" fxLayoutAlign="start center">
+            <div class="title">Get started now.</div>
+            <div class="desc">Trusted by millions, QDO powers teams all around the City. Explore which option is right for you.</div>
+            <div class="boxes custom-scroll-thin horizontal" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+                <div class="boxes-items" fxLayout="column" fxLayoutAlign="start center" fxFlex="33.3%" fxFlex.xs="90%" fxFlex.sm="90%" *ngFor="let item of planList;">
+                    <!-- <div class="most">Most Popular</div> -->
+                    <div class="boxes-items-label" *ngIf="item.name.toUpperCase() == 'QDO PRO'">
+                      <img class="label-img" src="../../../../assets/images/plans/pricing-lavel-light.svg">
+                      <div class="label-content">
+                        <div class="orange">National</div>
+                        <div class="orange">Exposure</div>
+                      </div>
+                    </div>
+                    <div class="boxes-items-label" *ngIf="item.name.toUpperCase() == 'QDO PRO PLUS'">
+                      <img class="label-img" src="../../../../assets/images/plans/pricing-lavel-dark.svg">
+                      <div class="label-content" >
+                          <div>Global</div>
+                          <div>Exposure</div>
+                      </div>
+                  </div>
+                  <div class="most"  *ngIf="item.name.toUpperCase() == 'QDO PRO'">Most Popular</div>
+                  <div class="most blue" *ngIf="item.name.toUpperCase() == 'QDO PRO PLUS'">Most Valuable</div>
+                    <div class="qdo pt-30">{{item.name | uppercase}}</div>
+                    <div fxLayout="row" class="offer" fxLayoutGap="4px" fxLayoutAlign="start center" *ngIf="item.name.toUpperCase() == 'QDO STARTER'">
+                        <div class="offer-off blue-bg" fxLayout="row" fxLayoutAlign="center center">{{'Trial Package'}}</div>
+                        <!-- <div class="offer-price">₹ 2,599 </div> -->
+                    </div>
+                    <div fxLayout="row" fxLayout="row" fxLayoutAlign="start start" class="pricing" *ngIf="!item.actualPricePerMonth">
+                        <!-- <div class="pricing-inr">INR ₹ </div> -->
+                        <div class="pricing-rate">{{'FREE'}} </div>
+                        <!-- <span>/month</span> -->
+                    </div>
+                    <div fxLayout="row" class="offer" fxLayoutGap="4px" fxLayoutAlign="start center" *ngIf="item.actualPricePerMonth">
+                      <div class="offer-off" [ngClass]="{'blue-bg' : item.name.toUpperCase() == 'QDO PRO PLUS'}" fxLayout="row" fxLayoutAlign="center center" *ngIf="item.discountPercentage">{{item.discountPercentage}} % OFF</div>
+                      <div class="offer-price">₹ {{item.actualPricePerMonth}} </div>
+                  </div>
+                    <div fxLayout="row" fxLayout="row" fxLayoutAlign="start start" class="pricing" *ngIf="item.priceAfterDiscountPerMonth">
+                      <div class="pricing-inr">INR ₹ </div>
+                      <div class="pricing-rate">{{item.priceAfterDiscountPerMonth}}<span>/month</span> </div>
+                    </div>
+                    <button class="btn fill blue" routerLink="/home">Get Started</button>
+                    <div class="detail" fxLayout="column" fxLayoutGap="10px" *ngIf="item.name.toUpperCase() == 'QDO STARTER'">
+
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> <span>{{item.noOfCoupons}}</span> Coupons using QDO Online
+                            </div>
+                            <div fxFlex="28px" class="details-img">
+                                <img src="../../../../assets/images/plans/i.svg">
+                                <div class="box">
+                                    QDO Online is a digital platform connecting businesses with customers online. It showcases customized offers, increases visibility, and simplifies offer management for businesses to tap into the digital world's opportunities
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Chat Support </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="detail" fxLayout="column" fxLayoutGap="10px" *ngIf="item.name.toUpperCase() == 'QDO PRO'">
+                      <div fxLayout="row" class="details" fxLayoutGap="10px">
+                          <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                          <div fxFlex="calc(100% - 76px)"><span>{{item.noOfCoupons}}</span> Coupons per month using QDO Online </div>
+                          <div fxFlex="28px" class="details-img">
+                              <img src="../../../../assets/images/plans/i.svg">
+                              <div class="box">
+                                  QDO Online is a digital platform connecting businesses with customers online. It showcases customized offers, increases visibility, and simplifies offer management for businesses to tap into the digital world's opportunities
+                              </div>
+                          </div>
+                      </div>
+                      <div fxLayout="row" class="details" fxLayoutGap="10px">
+                          <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                          <div fxFlex="calc(100% - 76px)"><span>10,000+</span> Customers reach with QDO Activities </div>
+                          <div fxFlex="28px" class="details-img">
+                              <img src="../../../../assets/images/plans/i.svg">
+                              <div class="box">
+                                  10,000+ customer reach with our offline & online activity that includes QDO box,QDO Fleet,QDO Board
+                              </div>
+                          </div>
+                      </div>
+                      <div fxLayout="row" class="details" fxLayoutGap="10px">
+                          <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                          <div fxFlex="calc(100% - 76px)"> Get Displayed on QDO’s Digital Board at <span>{{item.noOfDigitalBoardLocation}} Hot Location</span> for a period of {{item.duration}} Days </div>
+                          <div fxFlex="28px">
+
+                          </div>
+                      </div>
+                      <div fxLayout="row" class="details" fxLayoutGap="10px">
+                          <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                          <div fxFlex="calc(100% - 76px)"> Display Ads in QDO’s fleet for
+                              <span> {{item.duration}} Days.</span> </div>
+                          <div fxFlex="28px">
+
+                          </div>
+                      </div>
+                      <div fxLayout="row" class="details" fxLayoutGap="10px">
+                          <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                          <div fxFlex="calc(100% - 76px)"> Display Ads in QDO App for
+                              <span>{{item.duration}} Days.</span></div>
+                          <div fxFlex="28px">
+
+                          </div>
+                      </div>
+                      <div fxLayout="row" class="details" fxLayoutGap="10px">
+                          <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                          <div fxFlex="calc(100% - 76px)"> <span>Nation-wide </span>Brand Exposure.
+                              </div>
+                          <div fxFlex="28px">
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="detail" fxLayout="column" fxLayoutGap="10px" *ngIf="item.name.toUpperCase() == 'QDO PRO PLUS'">
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"><span>{{item.noOfCoupons}}</span> Coupons per month using QDO Online </div>
+                        <div fxFlex="28px" class="details-img">
+                            <img src="../../../../assets/images/plans/i.svg">
+                            <div class="box right">
+                                QDO Online is a digital platform connecting businesses with customers online. It showcases customized offers, increases visibility, and simplifies offer management for businesses to tap into the digital world's opportunities
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"><span>50,000+</span> Customers reach with QDO Activities </div>
+                        <div fxFlex="28px" class="details-img">
+                            <img src="../../../../assets/images/plans/i.svg">
+                            <div class="box right">
+                                50,000+ customer reach with our offline & online activity that includes QDO box,QDO Fleet,QDO Board
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"> Get Displayed on QDO’s Digital Board at <span>{{item.noOfDigitalBoardLocation}} Hot Location</span> for a period of {{item.duration}} Days </div>
+                        <div fxFlex="28px">
+
+                        </div>
+                    </div>
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"> Display Ads in QDO’s fleet for
+                            <span> {{item.duration}} Days.</span> </div>
+                        <div fxFlex="28px">
+
+                        </div>
+                    </div>
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"> Display Ads in QDO App for
+                            <span>{{item.duration}} Days.</span></div>
+                        <div fxFlex="28px">
+
+                        </div>
+                    </div>
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"> Dedicated Relationship Manager </div>
+                        <div fxFlex="28px">
+                        </div>
+                    </div>
+                    <div fxLayout="row" class="details" fxLayoutGap="10px">
+                        <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                        <div fxFlex="calc(100% - 76px)"> <span>Global </span>Brand Exposure.
+                            </div>
+                        <div fxFlex="28px">
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="boxes-items" fxLayout="column" fxLayoutAlign="start center" fxFlex="33.3%" fxFlex.xs="90%" fxFlex.sm="90%" *ngIf="false">
+                    <div class="boxes-items-label">
+                        <img class="label-img" src="../../../../assets/images/plans/pricing-lavel-light.svg">
+                        <div class="label-content" >
+                            <div>National</div>
+                            <div>Exposure</div>
+                        </div>
+                    </div>
+                    <div class="most">Most Popular</div>
+                    <div class="qdo">QDO PRO</div>
+                    <div fxLayout="row" class="offer" fxLayoutGap="4px" fxLayoutAlign="start center">
+                        <div class="offer-off" fxLayout="row" fxLayoutAlign="center center">67 % OFF</div>
+                        <div class="offer-price">₹ 2,599 </div>
+                    </div>
+                    <div fxLayout="row" fxLayout="row" fxLayoutAlign="start start" class="pricing">
+                        <div class="pricing-inr">INR ₹ </div>
+                        <div class="pricing-rate">849 <span>/month</span> </div>
+                    </div>
+                    <button class="btn fill" routerLink="/home">Get Started</button>
+                    <div class="detail" fxLayout="column" fxLayoutGap="10px">
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"><span>30</span> Coupons per month using QDO Online </div>
+                            <div fxFlex="28px" class="details-img">
+                                <img src="../../../../assets/images/plans/i.svg">
+                                <div class="box">
+                                    QDO Online is a digital platform connecting businesses with customers online. It showcases customized offers, increases visibility, and simplifies offer management for businesses to tap into the digital world's opportunities
+                                </div>
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"><span>10,000+</span> Customers reach with QDO Activities </div>
+                            <div fxFlex="28px" class="details-img">
+                                <img src="../../../../assets/images/plans/i.svg">
+                                <div class="box">
+                                    10,000+ customer reach with our offline & online activity that includes QDO box,QDO Fleet,QDO Board
+                                </div>
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Get Displayed on QDO’s Digital Board at <span>1 Hot Location</span> for a period of 30 Days </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Display Ads in QDO’s fleet for
+                                <span> 30 Days.</span> </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Display Ads in QDO App for
+                                <span>30 Days.</span></div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> <span>Nation-wide </span>Brand Exposure.
+                                </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="boxes-items" fxLayout="column" fxLayoutAlign="start center" fxFlex="33.3%" fxFlex.xs="90%" fxFlex.sm="90%" *ngIf="false">
+                    <div class="boxes-items-label">
+                        <img class="label-img" src="../../../../assets/images/plans/pricing-lavel-blue.svg">
+                        <div class="label-content" >
+                            <div>Global</div>
+                            <div>Exposure</div>
+                        </div>
+                    </div>
+                    <div class="most">Most Valuable</div>
+                    <div class="qdo">QDO PRO PLUS</div>
+                    <div fxLayout="row" class="offer" fxLayoutGap="4px" fxLayoutAlign="start center">
+                        <div class="offer-off blue-bg" fxLayout="row" fxLayoutAlign="center center">50 % OFF</div>
+                        <div class="offer-price">₹ 8,299 </div>
+                    </div>
+                    <div fxLayout="row" fxLayout="row" fxLayoutAlign="start start" class="pricing">
+                        <div class="pricing-inr">INR ₹ </div>
+                        <div class="pricing-rate">4,199 <span>/month</span> </div>
+                    </div>
+                    <button class="btn fill blue" routerLink="/home">Get Started</button>
+                    <div class="detail" fxLayout="column" fxLayoutGap="10px">
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"><span>60</span> Coupons per month using QDO Online </div>
+                            <div fxFlex="28px" class="details-img">
+                                <img src="../../../../assets/images/plans/i.svg">
+                                <div class="box right">
+                                    QDO Online is a digital platform connecting businesses with customers online. It showcases customized offers, increases visibility, and simplifies offer management for businesses to tap into the digital world's opportunities
+                                </div>
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"><span>50,000+</span> Customers reach with QDO Activities </div>
+                            <div fxFlex="28px" class="details-img">
+                                <img src="../../../../assets/images/plans/i.svg">
+                                <div class="box right">
+                                    50,000+ customer reach with our offline & online activity that includes QDO box,QDO Fleet,QDO Board
+                                </div>
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Get Displayed on QDO’s Digital Board at <span>3 Hot Location</span> for a period of 30 Days </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Display Ads in QDO’s fleet for
+                                <span> 90 Days.</span> </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Display Ads in QDO App for
+                                <span>90 Days.</span></div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> Dedicated Relationship Manager </div>
+                            <div fxFlex="28px">
+                            </div>
+                        </div>
+                        <div fxLayout="row" class="details" fxLayoutGap="10px">
+                            <div fxFlex="28px"><img src="../../../../assets/images/plans/tick.svg"></div>
+                            <div fxFlex="calc(100% - 76px)"> <span>Global </span>Brand Exposure.
+                                </div>
+                            <div fxFlex="28px">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="terms" (click)="openDialog()" fxHide.xs fxHide.sm fxHide.md fxLayout="column" fxLayoutAlign="center center">Payment Terms</div>
+
+        </div>
+        <div class="plans-compare" fxHide.xs fxHide.sm fxHide.md fxLayout="column" fxLayoutGap="14px">
+            <div class="plans-compare-title" fxLayout="column" fxLayoutAlign="start center">Compare our Plans</div>
+            <div class="table" fxLayout="column">
+                <div class="table-header" fxLayout="row" fxLayoutAlign="start stretch">
+                    <div fxFlex="14" fxLayout="row" fxLayoutAlign="center center">Packages</div>
+                    <div fxFlex="14" fxLayout="row" fxLayoutAlign="center center">Coupons</div>
+                    <div fxFlex="12" fxLayout="row" fxLayoutAlign="center center">QDO Digital Board </div>
+                    <div fxFlex="12" fxLayout="row" fxLayoutAlign="center center">QDO Fleet</div>
+                    <div fxFlex="12" fxLayout="row" fxLayoutAlign="center center">QDO App Display Ads</div>
+                    <div fxFlex="12" fxLayout="row" fxLayoutAlign="center center">Predicted Customer Reach</div>
+                    <div fxFlex="12" fxLayout="row" fxLayoutAlign="center center">Brand
+                        Exposure </div>
+                    <div fxFlex="12" fxLayout="row" fxLayoutAlign="center center">Dedicated Relationship Manager </div>
+                </div>
+                <div class="table-body" fxLayout="row" fxLayoutAlign="start stretch">
+                    <div class="child" fxFlex="14" fxLayout="column" fxLayoutAlign="center center">
+                        <div class="title">QDO STARTER</div>
+                        <div class="trail">Trial Package</div>
+                    </div>
+                    <div class="child" fxFlex="14"><span>3</span> /Coupons per month for 12 Months</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                </div>
+                <div class="table-body" fxLayout="row" fxLayoutAlign="start stretch">
+                    <div class="child" fxFlex="14" fxLayout="column" fxLayoutAlign="center center">
+                        <div class="title">QDO PRO</div>
+                        <div class="trail" style="color: var(--pink-text, #FE3152);"> Most Popular</div>
+                    </div>
+                    <div class="child" fxFlex="14"><span>30</span> /Coupons per month for 12 Months</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> 30 Days</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> 30 Days</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> 30 Days</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center">10,000+ </div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center">  Nation-wide</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/close.svg"></div>
+                </div>
+                <div class="table-body" fxLayout="row" fxLayoutAlign="start stretch">
+                    <div class="child" fxFlex="14" fxLayout="column" fxLayoutAlign="center center">
+                        <div class="title">QDO PRO PLUS</div>
+                        <div class="trail">Most Valuable</div>
+                    </div>
+                    <div class="child" fxFlex="14"><span>60</span> /Coupons per month for 12 Months</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> 90 Days</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> 90 Days</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> 90 Days</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center">50,000+ </div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> Global</div>
+                    <div class="child" fxFlex="12" fxLayout="row" fxLayoutAlign="center center"> <img src="../../../../assets/images/plans/tick-green.svg"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="plans-help" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex="100" fxLayoutGap="100px">
+            <div class="left" fxFlex="50" fxFlex.xs="auto" fxFlex.sm="auto" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="46px" fxLayoutGap.xs="26px" fxLayoutGap.sm="26px">
+                <div class="title">
+                    Our Team is here to help <br fxHide.xs fxHide.sm>You 24/7
+                </div>
+                <div fxHide.lg fxHide.xl fxHide.md class="right" fxLayoutAlign="center center">
+                    <img src="../../../../assets/images/plans/Image-Frame.svg">
+                </div>
+                <div fxLayout="column">
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px" fxLayoutGap="8px" fxLayoutGap="8px">
+                        <img src="../../../../assets/images/plans/tick.svg">
+                        <p>Get help directly from the editor, thanks to our 24/7 live chat support.</p>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px" fxLayoutGap="8px" fxLayoutGap="8px">
+                        <img src="../../../../assets/images/plans/tick.svg">
+                        <p>Troubleshoot by yourself with our video walkthroughs and guides.</p>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px" fxLayoutGap="8px" fxLayoutGap="8px">
+                        <img src="../../../../assets/images/plans/tick.svg">
+                        <p>Become a QDO Partner with our in-depth tutorials</p>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="50" class="right" fxHide.xs fxHide.sm>
+                <img src="../../../../assets/images/plans/Image-Frame.svg">
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="start" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="46px" fxLayoutGap.xs="16px" fxLayoutGap.xs="16px">
+    <div class="title">Still Thinking ?? <br fxHide.xs fxHide.sm> Let <span>QDO</span> Think For Your Business As Your Partner</div>
+    <button class="btn fill" routerLink="/home">Get Started</button>
+    <div class="sub-title">100 Merchants are <span>LIVE</span> right now</div>
+</div>

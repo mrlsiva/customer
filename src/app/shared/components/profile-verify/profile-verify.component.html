@@ -1,0 +1,15 @@
+<div fxLayout="column"  class="popup-bg-custom">
+  <div fxLayout="row" fxLayoutAlign="end center">
+      <button (click)="refresh()">
+    <img src="../../../../assets/images/payment/close.svg" width="21px">
+  </button>
+  </div>
+  <div class="content" *ngIf="userInfo.status == 'PENDING'">QDO team is validating your business information. Once validated, you will receive a notification.</div>
+  <div class="content" *ngIf="userInfo.status == 'HOLD'">QDO team is validating your business information. Once validated, you will receive a notification.</div>
+  <div class="content" *ngIf="userInfo.status == 'REJECTED'">Your business information Rejected. </div>
+  <div class="content" *ngIf="data.status == 'PLAN'">QDO team validating your payment information. Once validated, you will receive a notification.</div>
+  <div class="bold" *ngIf="userInfo.status == 'REJECTED'"><span>Reason : </span>{{userInfo.comments}}</div>
+  <div fxLayout="row" class="button" fxLayoutAlign="center center">
+    <button class="btn fill new" mat-button (click)="refresh()">OK</button>
+</div>
+</div>

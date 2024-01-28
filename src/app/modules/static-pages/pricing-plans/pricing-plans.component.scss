@@ -1,0 +1,612 @@
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+@import "../../../../assets/scss/mixins/btn.scss";
+@import "../../../../assets/scss/scrollbar.scss";
+.bg {
+    background: linear-gradient(0deg, #FFD8C3 9.05%, #FFEDE6 51.12%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.plans {
+    padding-top: 150px;
+    &-timer {
+        width: 100%;
+        & .title {
+            color: var(--orange-icon-fill, #FF7A22);
+            font-size: 48px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 25px;
+            @include breakpoint("xs") {
+                font-size: 26px;
+                text-align: center;
+                line-height: 32px;
+            }
+            @include breakpoint("sm") {
+                font-size: 26px;
+                text-align: center;
+                line-height: 32px;
+            }
+        }
+        & .time {
+            & .box {
+                & input {
+                    width: 110px;
+                    height: 110px;
+                    line-height: 110px;
+                    color: var(--pink-fill, #FE3152);
+                    text-align: center;
+                    font-size: 60px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 700;
+                    letter-spacing: -0.6px;
+                    outline: none;
+                    border-radius: 6.4px;
+                    border: 0.8px solid var(--pink-text, #FE3152);
+                    background: #FFF;
+                    margin-bottom: 4px;
+                    &::placeholder {
+                        color: var(--pink-fill, #FE3152);
+                    }
+                    @include breakpoint("xs") {
+                        margin-bottom: 2px;
+                        width: 54px;
+                        height: 54px;
+                        line-height: 54px;
+                        font-size: 27px;
+                    }
+                    @include breakpoint("sm") {
+                        margin-bottom: 2px;
+                        width: 54px;
+                        height: 54px;
+                        line-height: 54px;
+                        font-size: 27px;
+                    }
+                }
+                & span {
+                    color: var(--blue-text, #0078C9);
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: -0.16px;
+                    @include breakpoint("xs") {
+                        font-size: 12px;
+                    }
+                    @include breakpoint("sm") {
+                        font-size: 12px;
+                    }
+                }
+                & img {
+                    max-width: 100%;
+                    @include breakpoint("xs") {
+                        margin-top: 12px;
+                    }
+                    @include breakpoint("sm") {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+        & .exclusive {
+            margin-top: 17px;
+            &-offer {
+                color: var(--pink-text, #FE3152);
+                text-align: center;
+                font-size: 20px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -0.2px;
+                @include breakpoint("xs") {
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+                @include breakpoint("sm") {
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+            }
+            & img {
+                @include breakpoint("xs") {
+                    max-width: 20px;
+                }
+                @include breakpoint("sm") {
+                    max-width: 20px;
+                }
+            }
+        }
+    }
+    &-started {
+        margin-top: 27px;
+        @include breakpoint("xs") {
+            margin-top: 8px;
+        }
+        @include breakpoint("sm") {
+            margin-top: 8px;
+        }
+        & .title {
+            color: var(--orange-icon-fill, #FF7A22);
+            font-size: 40px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            @include breakpoint("xs") {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            @include breakpoint("sm") {
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+        & .desc {
+            color: var(--pink-text, #FE3152);
+            text-align: center;
+            font-size: 24px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.24px;
+            max-width: 817px;
+            margin: 0 auto;
+            @include breakpoint("xs") {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 2px;
+            }
+            @include breakpoint("sm") {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 2px;
+            }
+        }
+        & .boxes {
+            margin-top: 82px;
+            width: 100%;
+            @include breakpoint("xs") {
+                overflow-x: auto;
+                padding-bottom: 20px;
+            }
+            @include breakpoint("sm") {
+                overflow-x: auto;
+                padding-bottom: 20px;
+            }
+            &-items {
+                padding: 22px 42px;
+                border-radius: 16px;
+                background: #FDFDFD;
+                box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.07);
+                width: 100%;
+                cursor: pointer;
+                border: 1px solid #FFF;
+                transition: 0.3s;
+                position: relative;
+
+                &-label {
+                    position: absolute;
+                    top: 0;
+                    right: 15px;
+                    & .label {
+                        &-img {
+                            position: relative;
+                            width: 65px;
+                            height: 82px;
+                        }
+                        &-content {
+                            position: absolute;
+                            top: 12px;
+                            width: 65px;
+                            height: 82px;
+                            text-align: center;
+                            & div {
+                                color: white;
+                                font-size: 12px;
+                                font-weight: 600;
+                                word-wrap: break-word;
+                                &.orange {
+                                    color: #FF7A22;
+                                }
+                            }
+                        }
+                    }
+                }
+                @include breakpoint("xs") {
+                    padding: 15px;
+                    min-width: 90%;
+                }
+                @include breakpoint("sm") {
+                    padding: 15px;
+                    min-width: 90%;
+                }
+                &:hover {
+                    border: 1px solid #FE3152;
+                    transform: translate(0, -10px);
+                }
+                & .most {
+                    color: var(--pink-text, #FE3152);
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-bottom: 2px;
+                    &.blue{
+                      color: var(--blue-text, #0078C9);
+                    }
+                }
+                & .qdo {
+                    color: #101820;
+                    text-align: center;
+                    font-size: 28px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-bottom: 2px;
+                    &.pt-30 {
+                        padding-top: 30px;
+                    }
+                }
+                & .offer {
+                    margin-bottom: 30px;
+                    &-off {
+                        border-radius: 20px;
+                        background: #FFD7DD;
+                        color: #FE3152;
+                        text-align: center;
+                        font-size: 16px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        height: 34px;
+                        padding: 0 10px;
+                        &.blue-bg {
+                            color: var(--blue-text, #0078C9);
+                            background: #B6E2FF;
+                        }
+                    }
+                    &-price {
+                        color: var(--dark-grey, #606060);
+                        text-align: center;
+                        font-size: 16px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-decoration: line-through;
+                    }
+                }
+                & .pricing {
+                    margin-bottom: 30px;
+                    &-inr {
+                        color: #101820;
+                        text-align: center;
+                        font-size: 12px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                    &-rate {
+                        color: #101820;
+                        text-align: center;
+                        font-size: 40px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: -2px;
+                        & span {
+                            color: #101820;
+                            text-align: center;
+                            font-size: 12px;
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+                & button {
+                    height: 36px;
+                    line-height: 36px;
+                    width: 100%;
+                    margin-bottom: 25px;
+                    &.blue {
+                        background: var(--blue-text, #0078C9);
+                        border: 1px solid var(--blue-text, #0078C9);
+                    }
+                }
+                & .detail {
+                    &s {
+                        & div {
+                            color: #101820;
+                            font-size: 16px;
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            & span {
+                                color: #FE3152;
+                                font-weight: 700;
+                            }
+                        }
+                        &-img {
+                            position: relative;
+                            max-height: 28px;
+                            &:hover {
+                                & .box {
+                                    opacity: 1;
+                                }
+                            }
+                            & img {
+                                width: 28px;
+                                // &:hover {
+                                //     & .box {
+                                //         opacity: 1;
+                                //     }
+                                // }
+                            }
+                            & .box {
+                                position: absolute;
+                                opacity: 0;
+                                border-radius: 4px;
+                                background: #FE3152;
+                                width: 222px;
+                                padding: 20px 13px;
+                                color: var(--white-pale-background, rgba(255, 255, 255, 0.90));
+                                font-size: 12px;
+                                font-family: Poppins;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                top: 4px;
+                                // left: 16px;
+                                left: -238px;
+                                z-index: 99;
+                                &:hover {
+                                    opacity: 0;
+                                }
+                                @include breakpoint("xs") {
+                                    top: 4px;
+                                    left: -238px;
+                                }
+                                @include breakpoint("sm") {
+                                    top: 4px;
+                                    left: -238px;
+                                }
+                                &.right {
+                                    top: 4px;
+                                    left: -238px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .terms {
+            margin-top: 35px;
+            color: var(--blue-text, #0078C9);
+            font-size: 24px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            cursor: pointer;
+        }
+    }
+    &-compare {
+        margin-top: 65px;
+        width: 100%;
+        &-title {
+            color: var(--orange-icon-fill, #FF7A22);
+            font-size: 40px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        & .table {
+            border-radius: 18px;
+            background: #FDFDFD;
+            padding: 36px 26px;
+            &-header {
+                border-bottom: 1px solid #FE3152;
+                & div {
+                    border-right: 1px solid #FE3152;
+                    padding: 10px 20px;
+                    text-align: center;
+                    color: var(--black, #000);
+                    text-align: center;
+                    font-size: 18px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+            &-body {
+                // border-bottom: 1px solid #FE3152;
+                & .child {
+                    border-right: 1px solid #FE3152;
+                    padding: 10px 0px;
+                    text-align: center;
+                    color: #101820;
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    padding-bottom: 24px;
+                    padding-top: 21px;
+                    &:last-child {
+                        border: none;
+                    }
+                    & span {
+                        color: #FE3152;
+                        font-weight: 600;
+                    }
+                    & .title {
+                        color: var(--black, #000);
+                        text-align: center;
+                        font-size: 18px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    & .trail {
+                        color: #0078C9;
+                        text-align: center;
+                        font-size: 14px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+    &-help {
+        width: 100%;
+        padding-top: 133px;
+        @include breakpoint("xs") {
+            padding-top: 38px;
+        }
+        @include breakpoint("sm") {
+            padding-top: 38px;
+        }
+        & .left {
+            @include breakpoint("xs") {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+            @include breakpoint("sm") {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        & .title {
+            color: var(--orange-icon-fill, #FF7A22);
+            font-size: 36px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 30px;
+            @include breakpoint("xs") {
+                margin-top: 0px;
+                font-size: 16px;
+                max-width: 70%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            @include breakpoint("sm") {
+                margin-top: 0px;
+                font-size: 16px;
+                max-width: 70%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        & p {
+            color: #101820;
+            font-size: 20px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include breakpoint("xs") {
+                font-size: 10px;
+            }
+            @include breakpoint("sm") {
+                font-size: 10px;
+            }
+        }
+        & img {
+            max-width: 100%;
+            @include breakpoint("xs") {
+                max-width: calc(100% - 50px);
+            }
+            @include breakpoint("sm") {
+                max-width: calc(100% - 50px);
+            }
+        }
+    }
+}
+
+.start {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 58px;
+    padding-bottom: 104px;
+    @include breakpoint("xs") {
+        padding: 28px 50px;
+    }
+    @include breakpoint("sm") {
+        padding: 28px 50px;
+    }
+    & .title {
+        // max-width: 811px;
+        color: #0078C9;
+        text-align: center;
+        font-size: 36px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        @include breakpoint("xs") {
+            font-size: 16px;
+        }
+        @include breakpoint("sm") {
+            font-size: 16px;
+        }
+        & span {
+            color: #FE3152;
+            font-size: 36px;
+        }
+    }
+    & button {
+        height: 56px;
+        line-height: 36px;
+        width: 100%;
+        max-width: 338px;
+        margin-top: 30px;
+        color: #FFF;
+        font-size: 24px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    & .sub-title {
+        color: #FE3152;
+        font-size: 24px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        & span {
+            color: #0078C9;
+            font-size: 24px;
+        }
+    }
+}

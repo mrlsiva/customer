@@ -1,0 +1,32 @@
+<div class="steps-body text-center">
+    <div class="title">choose your Preferred Manual Payment Option</div>
+    <div class="price-details" fxLayout="column">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="amount">Price <span>(12 months)</span></div>
+            <div class="amount fw-600">
+                ₹{{planList?.actualPlanPricePerYear}}</div>
+        </div>
+        <div class="mt-20" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="amount f-10">Plan Discount <span>-{{selectedPlanDetail?.planDiscountPercentage}}</span></div>
+            <div class="amount f-10 fw-600"> <button class="btn micro">{{selectedPlanDetail?.discountPrice}}</button> </div>
+        </div>
+        <div class="bb-1" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="amount f-10">Tax <span>GST</span></div>
+            <div class="amount f-10 fw-600"> {{getPlanTax('TAX')}}% </div>
+        </div>
+        <div class="mt-10 mb-20" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="amount fw-700">Total</div>
+            <div class="amount fw-700"> ₹{{planList?.payablePrice}}/- </div>
+        </div>
+    </div>
+    <div class="payment" fxLayout="row wrap">
+        <!-- <div class="payment-method active" fxLayout="column" fxLayoutAlign="center center" fxFlex="calc(50% - 24px)">
+            <img src="../../../../assets/images/payment/paytm-logo.svg">
+            <span>Paytm</span>
+        </div> -->
+        <div class="payment-method " fxLayout="column" fxLayoutAlign="center center" fxFlex="calc(50% - 24px)" *ngFor="let payment of paymentList" (click)="selectPayment(payment.id)">
+            <img [src]="'../../../../assets/images/payment/'+payment.logo">
+            <span>{{payment.name}}</span>
+        </div>
+    </div>
+</div>

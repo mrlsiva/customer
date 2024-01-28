@@ -1,0 +1,7 @@
+@import '/src/assets/scss/variables.scss';
+.alert {
+    max-width: calc(100% - 20px);
+    // padding: 20px;
+    margin: 0 auto;
+    height: 100%;
+}

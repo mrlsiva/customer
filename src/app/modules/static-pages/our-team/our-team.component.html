@@ -1,0 +1,42 @@
+<div class="team">
+    <div class="top">
+        <div class="we">We're</div>
+        <img src="../../../../assets/images/team/logo.svg">
+    </div>
+
+    <div class="team-members">
+        <div class="circle-img" fxHide.xs fxHide.sm fxLayout="row" fxLayoutAlign="end start">
+            <img src="../../../../assets/images/team/circle-img.svg">
+        </div>
+        <div class="container" fxLayout="column" fxLayoutGap="40px">
+            <div class="" fxLayout="column">
+                <div class="title" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="10px">
+                    <div class="title-first">Meet the </div>
+                    <div class="title-second" fxLayout="column" fxLayoutGap="7px">
+                        <div class="title-second">Team</div>
+                        <img class="underline-img" src="../../../../assets/images/team/Underline.svg">
+                    </div>
+                </div>
+                <p class="desc">QDO took genesis from an idea to the reality with this leadership team and a mission to promote and local brands and businesses. We are committed to make QDO a shopper’s go-to app and for brands & businesses to promote themselves and reach
+                    audiences on a Global as well as Hyper-Local level. Presenting the core team Members.</p>
+            </div>
+            <div class="team-members-section" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="78px" fxLayoutGap.xs="20px" fxLayoutGap.sm="20px">
+                <div class="person" fxLayout="column" *ngFor="let user of users" fxFlex="calc(25% - 78px)" fxFlex.xs="calc(50% - 20px)" fxFlex.sm="calc(50% - 20px)" fxLayoutGap="31px" fxLayoutGap.xs="11px" fxLayoutGap.sm="11px">
+                    <div class="person-img">
+                        <!-- <img [src]="'../../../../assets/images/team/members/'+user.srcOn" /> -->
+                        <img [src]="'../../../../assets/images/team/members/'+user.src" [src]="user.src || user.srcOut" (mouseover)="user.src = user.srcOn" (mouseout)="user.src = user.srcOut" />
+                    </div>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="26px" fxLayoutGap.xs="4px" fxLayoutGap.sm="4px" class="content" fxLayoutAlign="start center">
+                        <div fxFlex="auto" fxLayout="column" fxLayoutAlign="center center" class="content-area">
+                            <div class="name">{{user.name}}</div>
+                            <div class="position">{{user.position}}</div>
+                        </div>
+                        <div class="person-img-social" fxFlex="28px" fxFlex.xs="12px" fxFlex.sm="12px">
+                            <img src="../../../../assets/images/team/linked-in.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

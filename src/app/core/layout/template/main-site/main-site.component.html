@@ -1,0 +1,13 @@
+<div class="main-site" fxLayout="column">
+    <!-- <qdo365-main-nav *ngIf="!sideMenuState && !this.isPreRegister"></qdo365-main-nav>
+    <qdo365-side-nav [ngClass]="{'sidenavshow' : sideMenuState}" *ngIf="sideMenuState" [sideMenuState]="sideMenuState"></qdo365-side-nav> -->
+    <div class="main-site-content custom-scroll-thin" fxFlexFill fxFlex="auto">
+        <div class="main-body">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <div class="footer" *ngIf="!sideMenuState && !this.isPreRegister">
+            <qdo365-footer></qdo365-footer>
+        </div> -->
+    </div>
+</div>
+<qdo365-spinner *ngIf="(isLoading$ | async)"></qdo365-spinner>

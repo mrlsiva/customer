@@ -1,0 +1,663 @@
+@import "../../../../assets/scss/variables.scss";
+@import "../../../../assets/scss/mixins/btn.scss";
+@import "../../../../assets/scss/scrollbar.scss";
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+.customer-ui {
+    width: 100%;
+    background-color: #fff;
+    @include breakpoint("xs") {
+        max-height: 100vh;
+        overflow: auto;
+    }
+    @include breakpoint("sm") {
+        max-height: 100vh;
+        overflow: auto;
+    }
+    & .nav-bar {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        min-height: 132px;
+        @include breakpoint("xs") {
+            min-height: 86px;
+            padding: 0 16px;
+            max-width: calc(100% - 32px);
+        }
+        @include breakpoint("sm") {
+            min-height: 86px;
+            padding: 0 16px;
+            max-width: calc(100% - 32px);
+        }
+        & .logo {
+            & svg {
+                width: 133px;
+                margin-right: 79px;
+                @include breakpoint("xs") {
+                    width: 67px;
+                }
+                @include breakpoint("sm") {
+                    width: 67px;
+                }
+            }
+            & .nav {
+                &-items {
+                    color: var(--Black-text, #343434);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    cursor: pointer;
+                    &:hover {
+                        color: #FE3152;
+                    }
+                    &.active {
+                        font-weight: 700;
+                        color: #FE3152;
+                    }
+                }
+            }
+            & .mobile-location {
+                & svg {
+                    width: 6px;
+                }
+                & span {
+                    color: var(--Dark-Grey, #606060);
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+        & .buttons {
+            & button {
+                height: 50px;
+                padding: 0 20px;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 8px;
+                color: #696969;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.32px;
+                @include breakpoint("xs") {
+                    height: 28px;
+                    padding: 0 10px;
+                    border-radius: 4px;
+                }
+                @include breakpoint("sm") {
+                    height: 28px;
+                    padding: 0 10px;
+                    border-radius: 4px;
+                }
+                &.sign-in {
+                    background: #FE3152;
+                    border: 1px solid #FE3152;
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    @include breakpoint("xs") {
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: -0.48px;
+                    }
+                    @include breakpoint("sm") {
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: -0.48px;
+                    }
+                }
+                &.location {
+                    border: 1px solid #696969;
+                }
+                & img {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+    & .banner {
+        background: var(--pink-linear, linear-gradient(180deg, #FFCAD5 0%, rgba(255, 217, 224, 0.00) 122.12%));
+        @include breakpoint("xs") {
+            padding: 24px 0;
+        }
+        @include breakpoint("sm") {
+            padding: 24px 0;
+        }
+        @include breakpoint("md-min") {
+            min-height: 664px;
+            max-height: 664px;
+        }
+        &-inner {
+            max-width: 1400px;
+            margin: auto;
+            width: 100%
+            // height: 526px;
+        }
+        &-img {
+            width: 100%;
+            @include breakpoint("xs") {
+                width: 90%;
+                padding-top: 16px;
+            }
+            @include breakpoint("sm") {
+                width: 90%;
+                padding-top: 16px;
+            }
+            & img {
+                max-width: 100%;
+            }
+        }
+        &-icon {
+            position: relative;
+            & svg {
+                width: 64px;
+            }
+            &.left {
+                left: 32px;
+            }
+            &.right {
+                right:32px;
+            }
+        }
+    }
+    & .marquee-section {
+        max-width: 100%;
+        overflow: hidden;
+        @include breakpoint("xs") {
+            min-height: 74px;
+        }
+        @include breakpoint("sm") {
+            min-height: 74px;
+        }
+        & .marquee {
+            &-scroll {
+                height: 90px;
+                @include breakpoint("xs") {
+                    height: 30px;
+                }
+                @include breakpoint("sm") {
+                    height: 30px;
+                }
+            }
+            &.black {
+                height: 121px;
+                @include breakpoint("xs") {
+                    height: 40px;
+                }
+                @include breakpoint("sm") {
+                    height: 40px;
+                }
+                & marquee { 
+                    transform: rotateY(0deg) rotate(359deg);
+                    background-color: #000;
+                }
+            }
+            &.red {
+                background: #FE3152;
+                z-index: 99;
+            }
+            & marquee {
+                height: 90px;
+                @include breakpoint("xs") {
+                    height: 30px;
+                }
+                @include breakpoint("sm") {
+                    height: 30px;
+                }
+                & span {
+                    color: #FFF;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    @include breakpoint("xs") {
+                        font-size: 16px;
+                    }
+                    @include breakpoint("sm") {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    & .prize-section {
+        width: 100%;
+        max-width: 1072px;
+        margin: 75px auto 0px auto;
+        @include breakpoint("xs") {
+            padding: 0 16px;
+            max-width: calc(100% - 32px);
+            margin: 50px auto 0px auto;
+        }
+        @include breakpoint("sm") {
+            padding: 0 16px;
+            max-width: calc(100% - 32px);
+            margin: 50px auto 0px auto;
+        }
+        &-img {
+            max-width: 316px;
+            @include breakpoint("xs") {
+                max-width: 153px;
+                margin: 0 auto;
+            }
+            @include breakpoint("sm") {
+                max-width: 253px;
+                margin: 0 auto;
+            }
+            & img {
+                max-width: 100%;
+            }
+        }
+        & .border-img {
+            max-width: 220px;
+            &.small {
+                max-width: 150px;
+                @include breakpoint("xs") {
+                    max-width: 68px;
+                }
+                @include breakpoint("sm") {
+                    max-width: 68px;
+                }
+            }
+            @include breakpoint("xs") {
+                max-width: 86px;
+            }
+            @include breakpoint("sm") {
+                max-width: 86px;
+            }
+        }
+        & .desc {
+            color: #343434;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -1px;
+            @include breakpoint("xs") {
+                font-size: 14px;
+                line-height: 14px;
+                letter-spacing: -0.7px;
+                text-align: center;
+            }
+            @include breakpoint("sm") {
+                font-size: 14px;
+                line-height: 14px;
+                letter-spacing: -0.7px;
+                text-align: center;
+            }
+        }
+        & .play {
+            color: #FE3152;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            @include breakpoint("xs") {
+                font-size: 12px;
+            }
+            @include breakpoint("sm") {
+                font-size: 12px;
+            }
+        }
+        & .earn {
+            color: #343434;
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 64px;
+            letter-spacing: -2.75px;
+            @include breakpoint("xs") {
+                font-size: 24px;
+                line-height: 24px;
+                letter-spacing: -1.2px;
+            }
+            @include breakpoint("sm") {
+                font-size: 24px;
+                line-height: 24px;
+                letter-spacing: -1.2px;
+            }
+            &.reward {
+                color: #FE3152;
+            }
+        }
+    }
+    & .mobile-app {
+        background: #FFF0F3;
+        padding-top: 64px;
+        & img {
+            max-width: 525px;
+            width: 100%;
+            @include breakpoint("xs") {
+                max-width: 60%;
+            }
+            @include breakpoint("sm") {
+                max-width: 70%;
+            }
+        }
+        & .download {
+            background: #FE3152;
+            width: 100%;
+            height: 274px;
+            @include breakpoint("xs") {
+                height: 146px;
+            }
+            @include breakpoint("sm") {
+                height: 146px;
+            }
+            & .name {
+                color: #FFF;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: -2.5px;
+                margin-bottom: 23px;
+                @include breakpoint("xs") {
+                    font-size: 14px;
+                    letter-spacing: -0.7px;
+                    margin-bottom: 0px;
+                }
+                @include breakpoint("sm") {
+                    font-size: 14px;
+                    letter-spacing: -0.7px;
+                    margin-bottom: 0px;
+                }
+                &.bold {
+                    font-size: 55px;
+                    font-weight: 700;
+                    letter-spacing: -2.75px;
+                    @include breakpoint("xs") {
+                        font-size: 14px;
+                        letter-spacing: -0.7px;
+                    }
+                    @include breakpoint("sm") {
+                        font-size: 16px;
+                        letter-spacing: -0.8px;
+                    }
+                }
+            }
+            & .app {
+                & a {
+                    cursor: pointer;
+                    & img {
+                        max-width: 175px;
+                        @include breakpoint("xs") {
+                            max-width: 96px;
+                        }
+                        @include breakpoint("sm") {
+                            max-width: 96px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .winner {
+        padding: 46px 0;
+        background: linear-gradient(122deg, #FFF -8.7%, #FFCFD7 71.81%);
+        &.white-bg {
+            background: #fff;
+        }
+        & .border-img {
+            max-width: 100px;
+            @include breakpoint("xs") {
+                max-width: 60px;
+            }
+            @include breakpoint("sm") {
+                max-width: 60px;
+            }
+        }
+        & .earn {
+            color: #343434;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -1.5px;
+            @include breakpoint("xs") {
+                font-size: 16px;
+            }
+            @include breakpoint("sm") {
+                font-size: 16px;
+            }
+            &.bold {
+                color: #FE3152;
+            }
+        }
+        &-profile {
+            max-width: 90%;
+            @include breakpoint("xs") {
+                margin-top: 27px;
+            }
+            @include breakpoint("sm") {
+                margin-top: 27px;
+            }
+            &-area {
+                position: relative;
+                & .king {
+                    max-width: 99px;
+                    position: absolute;
+                    top: -66px;
+                    right: -40px;
+                    @include breakpoint("xs") {
+                        top: -35px;
+                        right: -22px;
+                        max-width: 60px;
+                    }
+                    @include breakpoint("sm") {
+                        top: -35px;
+                        right: -22px;
+                        max-width: 60px;
+                    }
+                    & img {
+                        width: 100%;
+                        max-width: 99px;
+                        @include breakpoint("xs") {
+                            max-width: 60px;
+                        }
+                        @include breakpoint("sm") {
+                            max-width: 60px;
+                        }
+                    }
+                }
+                & .user {
+                    border-radius: 34px;
+                    border: 5px solid #FE3152;
+                    background: #FFE8EB;
+                    min-height: 243px;
+                    width: 100%;
+                    overflow: hidden;
+                    &.happy {
+                        border-radius: 24px;
+                        border: 1px solid #C1C1C1;
+                        background: #FFF;
+                        box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+                        & img {
+                            padding: 30px 0;
+                            max-width: 60%;
+                            height: auto;
+                        }
+                        & .desc {
+                            max-width: 70%;
+                            text-align: center;
+                        }
+                    }
+                    @include breakpoint("xs") {
+                        min-height: 122px;
+                        border-radius: 10px;
+                        border: 3px solid #FE3152;
+                    }
+                    @include breakpoint("sm") {
+                        min-height: 122px;
+                        border-radius: 10px;
+                        border: 3px solid #FE3152;
+                    }
+                    &.active {
+                        min-height: 338px;
+                        background: #FFE8AD;
+                        @include breakpoint("xs") {
+                            min-height: 145px;
+                        }
+                        @include breakpoint("sm") {
+                            min-height: 145px;
+                        }
+                        & img {
+                            height: 300px;
+                            @include breakpoint("xs") {
+                                height: 120px;
+                            }
+                            @include breakpoint("sm") {
+                                height: 120px;
+                            }
+                        }
+                    }
+                    & img {
+                        height: 200px;
+                        @include breakpoint("xs") {
+                            height: 100px;
+                        }
+                        @include breakpoint("sm") {
+                            height: 100px;
+                        }
+                    }
+                }
+                & .name {
+                    color: #343434;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    @include breakpoint("xs") {
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 15px; 
+                        margin-top: 8px;
+                    }
+                    @include breakpoint("sm") {
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 15px; 
+                        margin-top: 8px;
+                    }
+                }
+                & .desc {
+                    color: #FE3152;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    @include breakpoint("xs") {
+                        font-size: 10px;
+                    }
+                    @include breakpoint("sm") {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        & .out-of-qdo {
+            & .desc {
+                color: #343434;
+                text-align: center;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: -1.2px;
+            }
+            & .title {
+                color: #343434;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -2.5px;
+            }
+        }
+    }
+    & .footer {
+        background: #000;
+        color: #fff;
+        padding: 73px 91px;
+        & .width {
+            width: 66%;
+            @include breakpoint("xs") {
+                width: 100%;
+            }
+            @include breakpoint("sm") {
+                width: 100%;
+
+            }
+        }
+        & .divider {
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+        }
+        & .help {
+            color: #FFF;
+text-align: center;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -1px;
+        }
+        & .swipe-happi {
+            color: #FE3152;
+text-align: center;
+font-size: 42px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -2.1px;
+        }
+        & .swipe {
+            color: #FFF;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.8px;
+        }
+        & .shopping {
+            color: #FFF;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -1px;
+        }
+        a {
+            cursor: pointer;
+        }
+        & .title {
+            color: #FE3152;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -1.5px;
+        }
+        & .menu {
+            color: #FFF;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -1px;
+& svg {
+    margin-right: 12px;
+}
+        }
+    }
+}

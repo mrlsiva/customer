@@ -1,0 +1,47 @@
+@mixin draw-border($style, $thickness, $color: $qdo365-color-black) {
+    border: $style $thickness $color;
+}
+
+@mixin draw-border-radius($style, $thickness, $color: $qdo365-color-black, $radius) {
+    @include draw-border($style, $thickness, $color);
+    border-radius: $radius;
+}
+
+@mixin draw-border-top($style, $thickness, $color: $qdo365-color-black) {
+    border-top: $style $thickness $color;
+}
+
+@mixin draw-border-bottom($style, $thickness, $color: $qdo365-color-black) {
+    border-bottom: $style $thickness $color;
+}
+
+@mixin draw-border-left($style, $thickness, $color: $qdo365-color-black) {
+    border-left: $style $thickness $color;
+}
+
+@mixin draw-border-right($style, $thickness, $color: $qdo365-color-black) {
+    border-right: $style $thickness $color;
+}
+
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $qdo365-color-black) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+
+@mixin stitch-border($stroke-width: 4, $color: $qdo365-color-black) {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='"+ rgba($color, $alpha: 0.99) +"' stroke-width='"+ $stroke-width +"' stroke-dasharray='6%2c 14' stroke-dashoffset='22' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+// Issue for smaller circle
+@mixin stitch-border-circle($stroke-width: 4,
+$color: $qdo365-color-black) {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='"+ rgba($color, $alpha: 0.99) +"' stroke-width='"+ $stroke-width +"' stroke-dasharray='11' stroke-dashoffset='83' stroke-linecap='round'/%3e%3c/svg%3e");
+    border-radius: 100px;
+}
+
+@mixin blur-background($blur-density: 4px) {
+    -webkit-backdrop-filter: blur($blur-density);
+    -moz-backdrop-filter: blur($blur-density);
+    -ms-backdrop-filter: blur($blur-density);
+    -o-backdrop-filter: blur($blur-density);
+    backdrop-filter: blur($blur-density);
+}

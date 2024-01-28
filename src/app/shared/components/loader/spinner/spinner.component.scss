@@ -1,0 +1,118 @@
+@import "../../../../../assets/scss/variables.scss";
+@import "../../../../../assets/scss/mixins/design-util.scss";
+
+.qdo365-loader {
+  & .overlay {
+    position: absolute;
+    min-height: 100% !important;
+    height: auto;
+    min-width: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  & .bg-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: $qdo365-color-white, $alpha: 0.25);
+    border-radius: 0px;
+    @include blur-background(5px);
+  }
+
+  & .spinner-message {
+    position: absolute;
+    top: 60%;
+    z-index: 99;
+    // left: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  & .loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    // left: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  & .loader:before,
+  & .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+
+  & .loader:before {
+    animation: ball1 1s infinite;
+    background-color: $qdo365-color-orange;
+    box-shadow: 30px 0 0 $qdo365-color-orange;
+    margin-bottom: 10px;
+  }
+
+  & .loader:after {
+    animation: ball2 1s infinite;
+    background-color: $qdo365-app-color;
+    box-shadow: 30px 0 0 $qdo365-app-color;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) scale(0.8)
+    }
+
+    50% {
+      transform: rotate(360deg) scale(1.2)
+    }
+
+    100% {
+      transform: rotate(720deg) scale(0.8)
+    }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 $qdo365-app-color;
+    }
+
+    50% {
+      box-shadow: 0 0 0 $qdo365-app-color;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+
+    100% {
+      box-shadow: 30px 0 0 $qdo365-app-color;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 $qdo365-color-orange;
+    }
+
+    50% {
+      box-shadow: 0 0 0 $qdo365-color-orange;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+
+    100% {
+      box-shadow: 30px 0 0 $qdo365-color-orange;
+      margin-top: 0;
+    }
+  }
+}

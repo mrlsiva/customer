@@ -1,0 +1,426 @@
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+.container {
+    width: calc(100% - 20px) !important;
+    padding: 10px;
+}
+
+.about-us {
+    width: 100%;
+    padding: 0px;
+    background: var(--orange-background, #FFF);
+    // min-height: 307px;
+    background-image: url("../../../../assets/images/about-us/about-bg.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    height: 100vh;
+    @include breakpoint("xs") {
+        width: 100%;
+        background-size: cover;
+        padding: 15px 0px;
+        height: 35vh;
+        margin-top: 100px;
+    }
+    @include breakpoint("sm") {
+        width: 100%;
+        background-size: cover;
+        padding: 15px 0px;
+        height: 350vh;
+        margin-top: 100px;
+    }
+    & .container {
+        padding-bottom: 60px;
+        @include breakpoint("xs") {
+            padding-bottom: 10px;
+        }
+        @include breakpoint("sm") {
+            padding-bottom: 10px;
+        }
+        & .title {
+            color: #FFF;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px;
+            @include breakpoint("xs") {
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                text-align: center;
+            }
+            @include breakpoint("sm") {
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+        & .sub-title {
+            color: #FFF;
+            font-size: 24px;
+            line-height: 36px;
+            @include breakpoint("xs") {
+                color: #FFF;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 18px;
+                text-align: center;
+            }
+            @include breakpoint("sm") {
+                color: #FFF;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 18px;
+                text-align: center;
+            }
+        }
+        & button {
+            color: var(--white, #FFF);
+            text-align: center;
+            font-size: 12px;
+            line-height: 31.76px;
+            // text-transform: capitalize;
+            border-radius: 8px;
+            height: 36px;
+            outline: none;
+            border: 0;
+            background: var(--pink-fill, #FE3152);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: none;
+            @include breakpoint("xs") {
+                margin-top: 10px;
+            }
+            @include breakpoint("sm") {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.football {
+    width: 100%;
+    padding: 80px 0;
+    @include breakpoint("xs") {
+        padding: 20px 0;
+    }
+    @include breakpoint("sm") {
+        padding: 20px 0;
+    }
+    h2 {
+        color: var(--pink-text, #FE3152);
+        font-size: 36px;
+        font-weight: 700;
+        @include breakpoint("xs") {
+            text-align: center;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.2px;
+            padding: 0 53px;
+        }
+        @include breakpoint("sm") {
+            padding: 0 53px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: -0.2px;
+        }
+    }
+    p {
+        color: var(--black-text, #343434);
+        text-align: justify;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        @include breakpoint("xs") {
+            line-height: 15px;
+            font-size: 10px;
+            padding: 0 20px;
+        }
+        @include breakpoint("sm") {
+            line-height: 15px;
+            font-size: 10px;
+            padding: 0 20px;
+        }
+    }
+}
+
+.co-founder {
+    width: 100%;
+    padding: 60px 0px;
+    background: var(--orange-background, #FFF);
+    // min-height: 307px;
+    background-image: url("../../../../assets/images/about-us/co-founder-bg.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    height: 405px;
+    @include breakpoint("xs") {
+        width: 100%;
+        background-size: cover;
+        padding: 15px 0px;
+        height: 163px;
+    }
+    @include breakpoint("sm") {
+        width: 100%;
+        background-size: cover;
+        padding: 15px 0px;
+        height: 200px;
+    }
+    & .inner {
+        max-width: calc(100% - 160px);
+        margin: 0 auto;
+        padding-top: 91px;
+        @include breakpoint("xs") {
+            padding: 0px;
+            max-width: calc(100% - 70px);
+        }
+        @include breakpoint("sm") {
+            padding: 0px;
+            max-width: calc(100% - 70px);
+        }
+        & .title {
+            color: #000;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 120%;
+            &.co {
+                color: #FE3152;
+            }
+            @include breakpoint("xs") {
+                margin-bottom: 12px;
+                font-size: 20px;
+            }
+            @include breakpoint("sm") {
+                margin-bottom: 12px;
+                font-size: 20px;
+            }
+        }
+        & button {
+            color: var(--white-text, #F4F4F4);
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 105.5%;
+            // text-transform: capitalize;
+            width: fit-content;
+            margin-top: 18px;
+            padding: 0 20px;
+            border-radius: 8px;
+            height: 50px;
+            outline: none;
+            border: 0;
+            background: var(--pink-fill, #FE3152);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            @include breakpoint("xs") {
+                height: 28px;
+                font-size: 10px;
+                border-radius: 4px;
+                margin-top: 0px;
+            }
+            @include breakpoint("sm") {
+                height: 28px;
+                font-size: 10px;
+                border-radius: 4px;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+.tab {
+    background-color: #FFF;
+    padding: 80px 0;
+    @include breakpoint("xs") {
+        padding: 20px 0;
+    }
+    @include breakpoint("sm") {
+        padding: 20px 0;
+    }
+    &-section {
+        @include breakpoint("xs") {
+            padding: 0 20px;
+        }
+        @include breakpoint("sm") {
+            padding: 0 20px;
+        }
+    }
+    & .line {
+        width: 12px;
+        border-radius: 24px;
+        background: #FFF;
+    }
+    & .active {
+        & .line {
+            width: 12px;
+            border-radius: 24px;
+            background: var(--pink-text, #FE3152);
+        }
+        & h2 {
+            color: var(--pink-text, #FE3152);
+            font-size: 36px;
+            font-weight: 700;
+            &.text-center {
+                color: var(--pink-text, #FE3152);
+                text-align: center;
+                font-size: 20px;
+                font-family: Poppins;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: -0.2px;
+            }
+            @include breakpoint("xs") {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 8px;
+            }
+            @include breakpoint("sm") {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    & h2 {
+        color: var(--dark-grey, #606060);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 46px;
+    }
+    & p {
+        color: #000;
+        font-size: 24px;
+        line-height: 36px;
+        @include breakpoint("xs") {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        @include breakpoint("sm") {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    & img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.connect {
+    padding: 80px 0;
+    background: linear-gradient(0deg, #FFD8C3 9.05%, #FFEDE6 51.12%);
+    @include breakpoint("xs") {
+        padding: 40px 0;
+    }
+    @include breakpoint("sm") {
+        padding: 40px 0;
+    }
+    &-item {
+        margin-bottom: 100px;
+        @include breakpoint("xs") {
+            margin-bottom: 2px;
+        }
+        @include breakpoint("sm") {
+            margin-bottom: 20px;
+        }
+    }
+    & h2 {
+        color: var(--orange-icon-fill, #FF7A22);
+        font-size: 36px;
+        font-weight: 700;
+        padding-left: 30px;
+        @include breakpoint("xs") {
+            padding: 0px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+        }
+        @include breakpoint("sm") {
+            padding: 0px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+        }
+    }
+    & p {
+        color: var(--black-text, #343434);
+        text-align: justify;
+        font-size: 20px;
+        line-height: 28px;
+        padding-right: 60px;
+        padding-left: 30px;
+        @include breakpoint("xs") {
+            padding: 0px;
+            font-size: 10px;
+            font-family: Poppins;
+            font-weight: 400;
+            line-height: 12px;
+        }
+        @include breakpoint("sm") {
+            padding: 0px;
+            font-size: 10px;
+            font-family: Poppins;
+            font-weight: 400;
+            line-height: 12px;
+        }
+    }
+    & img {
+        // max-width: 80%;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.shop {
+    height: 300px;
+    background: var(--faq-bg, #78C9FF);
+    @include breakpoint("xs") {
+        height: 150px;
+    }
+    @include breakpoint("sm") {
+        height: 150px;
+    }
+    & h2 {
+        color: var(--white-text, #FFF);
+        font-size: 36px;
+        font-weight: 600;
+        @include breakpoint("xs") {
+            font-size: 16px;
+            text-align: center;
+        }
+        @include breakpoint("sm") {
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    & button {
+        color: var(--white-text, #F4F4F4);
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 500;
+        width: fit-content;
+        padding: 0 60px;
+        border-radius: 8px;
+        height: 50px;
+        outline: none;
+        border: 0;
+        background: var(--pink-fill, #FE3152);
+        cursor: pointer;
+        @include breakpoint("xs") {
+            font-size: 16px;
+            height: 34px;
+            padding: 0 20px;
+        }
+        @include breakpoint("sm") {
+            font-size: 16px;
+            height: 34px;
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/** Shape Fuction **/
+@mixin draw-square($size, $radius: 0) {
+	width: $size;
+	height: $size;
+
+	@if $radius != 0 {
+		border-radius: $radius;
+	}
+}
+
+@mixin draw-circle($width, $height) {
+	@if $width != 0 {
+		width: $width;
+	}
+	@if $height != 0 {
+		height: $height;
+	}
+	border-radius: 50% 50%;
+}

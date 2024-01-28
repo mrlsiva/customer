@@ -1,0 +1,23 @@
+<div fxLayout="column" class="side-nav">
+    <div fxLayout="row" class="side-nav-header">
+        <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center"><img src="../../../../../assets/images/LOGO-BUSINESS.svg"></div>
+        <div fxFlex="50" class="close" fxLayout="row" fxLayoutAlign="end center">
+            <button (click)="close()"><mat-icon>close</mat-icon></button>
+        </div>
+    </div>
+    <div fxLayout="column" class="side-nav-body custom-scroll-thin">
+        <a class="menu active" fxLayout="row" fxLayoutAlign="center center" routerLink="/home" routerLinkActive="active" (click)="close()">Home</a>
+        <a class="menu " fxLayout="row" fxLayoutAlign="center center" routerLink="/home" (click)="close()">Partner with Us</a>
+        <a class="menu " fxLayout="row" fxLayoutAlign="center center" routerLink="/about-us" routerLinkActive="active" (click)="close()">About Us</a>
+        <a class="menu " fxLayout="row" fxLayoutAlign="center center" routerLink="/pricing-plans" routerLinkActive="active" (click)="close()">Pricing Plan</a>
+        <a class="menu " fxLayout="row" fxLayoutAlign="center center" routerLink="/our-team" routerLinkActive="active" (click)="close()">Our Team</a>
+    </div>
+    <div fxLayout="column" class="side-nav-footer" fxLayoutAlign="center center">
+        <div class="line"></div>
+        <div class="social-icon" fxLayout="row" fxLayoutAlign="end center">
+            <a>
+                <img src="../../../../../assets/images/social/Social-Media-Icons.png">
+            </a>
+        </div>
+    </div>
+</div>

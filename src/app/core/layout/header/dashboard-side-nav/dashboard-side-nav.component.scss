@@ -1,0 +1,72 @@
+.dashbord-side-nav {
+    background-color: #fff;
+    // min-height: calc(100vh - 227px);
+    // max-height: calc(100vh - 227px);
+    min-height: calc(100vh - 91px);
+    // max-height: calc(100vh - 91px);
+    // overflow: auto;
+    padding: 68px 0px;
+    & .menu {
+        width: 166px;
+        margin: 0 auto;
+        &-items {
+            width: 100%;
+            padding: 12px 15px;
+            cursor: pointer;
+            & svg {
+                fill: #D0D2DA;
+            }
+            &:hover,
+            &.active {
+                border-radius: 12px;
+                background: #FFE3D1;
+                & svg {
+                    fill: var(--orange-icon-fill, #FF7A22);
+                }
+                // &.menu-item {
+                //     color: var(--orange-icon-fill, #FF7A22);
+                //     font-weight: 500;
+                // }
+                & .menu-name {
+                    color: var(--orange-icon-fill, #FF7A22);
+                    font-weight: 500;
+                }
+            }
+        }
+        &-name {
+            color: #606060;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        &.query {
+            width: 187px;
+            height: 59px;
+            border-radius: 10px;
+            background: #FFE3D1;
+            & .manager {
+                color: var(--orange-icon-fill, #FF7A22);
+                font-family: Poppins;
+                font-size: 11.5px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+                /* 156.522% */
+            }
+            & .contact {
+                color: var(--orange-icon-fill, #FF7A22);
+                font-family: Poppins;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px;
+                /* 180% */
+            }
+        }
+        &.logout {
+            margin-top: 15px;
+        }
+    }
+}

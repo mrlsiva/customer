@@ -1,0 +1,22 @@
+<div class="main-nav container" fxFlex="auto" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+        <div class="main-nav-logo" fxLayout="row" fxLayoutAlign="start center" routerLink="/home"><img src="../../../../../assets/images/LOGO-BUSINESS.svg" fxHide.md fxHide.lg fxHide.xl></div>
+        <div class="main-nav-logo" fxLayout="row" fxLayoutAlign="start center" routerLink="/home"><img src="../../../../../assets/images/logo.svg" fxHide.xs fxHide.sm></div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="115px" fxLayoutGap.md="60px" fxLayoutAlign="end center" fxHide.xs fxHide.sm fxHide.md>
+        <div fxLayout="row" fxLayoutGap="60px" fxLayoutGap.md="20px" fxLayoutAlign="end center" class="menu" [ngClass]="{'aboutus' : navWhite}">
+            <div class="menu-item" routerLink="/home" routerLinkActive="active">Home</div>
+            <div class="menu-item" routerLink="/about-us" routerLinkActive="active">About Us</div>
+            <div class="menu-item" routerLink="/our-team" routerLinkActive="active">Our Team</div>
+            <div class="menu-item" routerLink="/pricing-plans" routerLinkActive="active">Pricing Plans</div>
+        </div>
+        <button class="btn fill" routerLink="/home">Partner with us</button>
+    </div>
+    <div class="mobile" fxHide.gt-sm>
+        <div class="menu-content" fxLayout="row" fxFlex="90" fxLayoutAlign.xs="start center" fxLayoutAlign.sm="start center" fxShow.xs fxShow.sm>
+            <div fxFlex="50" fxLayoutAlign="center center">
+                <button mat-icon-button (click)="toggleSidenav()"><mat-icon>menu</mat-icon></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+@import "./variables.scss";
+.custom-scroll {
+    scrollbar-color: $qdo365-color-friargray $qdo365-color-gray;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $qdo365-color-gray;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 15px;
+        background: $qdo365-color-friargray;
+    }
+    // &-hidden::-webkit-scrollbar {
+    //     display: none;
+    // }
+    &-mini {
+        scrollbar-color: $qdo365-color-friargray $qdo365-color-gray;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $qdo365-color-friargray;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $qdo365-color-friargray;
+            outline: 1.5px solid $qdo365-color-friargray;
+        }
+        &::-moz-scroller {
+            width: 10px;
+        }
+        &::-moz-scroller-track {
+            background-color: $qdo365-color-friargray;
+        }
+        &::-moz-scroller-thumb {
+            background-color: $qdo365-color-friargray;
+            outline: 1.5px solid $qdo365-color-friargray;
+        }
+    }
+    &-thin {
+        scrollbar-color: $qdo365-color-friargray $qdo365-color-gray;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $qdo365-inactive-color;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $qdo365-color-friargray;
+            outline: 1.5px solid $qdo365-color-friargray;
+        }
+        &.horizontal {
+            &::-webkit-scrollbar {
+                margin-top: 10px;
+                height: 3px;
+                cursor: pointer;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $qdo365-color-friargray;
+                border-radius: 50px;
+                outline: 1.5px solid $qdo365-color-friargray;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: #C8C8C8;
+            }
+            &:hover {
+                &::-webkit-scrollbar {
+                    height: 8px;
+                }
+            }
+        }
+    }
+}
