@@ -8,13 +8,17 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { CreatePasswordComponent } from './create-password/create-password.component';
+import { TellUsComponent } from './tell-us/tell-us.component';
 
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent,
     ForgotPasswordComponent,
     CustomerLoginComponent,
-    CategoriesComponent],
+    CategoriesComponent,
+    CreatePasswordComponent,
+    TellUsComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
