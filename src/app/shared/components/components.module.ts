@@ -15,6 +15,7 @@ import { TermsComponent } from './terms/terms.component';
 import { ReadLetterComponent } from './read-letter/read-letter.component';
 import { PaymentTermComponent } from './payment-term/payment-term.component';
 import { PaymentTermsComponent } from './payment-terms/payment-terms.component';
+import { TicketHotDealsComponent } from './ticket-hot-deals/ticket-hot-deals.component';
 
 
 
@@ -30,6 +31,7 @@ import { PaymentTermsComponent } from './payment-terms/payment-terms.component';
     ReadLetterComponent,
     PaymentTermComponent,
     PaymentTermsComponent,
+    TicketHotDealsComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +52,7 @@ import { PaymentTermsComponent } from './payment-terms/payment-terms.component';
     TermsComponent,
     ReadLetterComponent,
     PaymentTermComponent,
+    TicketHotDealsComponent
   ]
 })
 export class ComponentsModule { }

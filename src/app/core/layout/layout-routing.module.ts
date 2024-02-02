@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainSiteComponent } from './template/main-site/main-site.component';
 import { CustomerHomeComponent } from 'src/app/modules/customer/customer-home/customer-home.component';
+import { LandingSiteComponent } from './template/landing-site/landing-site.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CustomerHomeComponent,
+    component: LandingSiteComponent,
     children: [
       {
         path: '',
@@ -26,11 +27,10 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule)
-
-        // loadChildren: () => import('../../modules/customer/customer.module').then(m => m.CustomerModule)
       }
     ]
   },
+  
   { path: '**', redirectTo: '' }
 ];
 

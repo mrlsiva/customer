@@ -1,0 +1,162 @@
+
+.coupon {
+    width: 100%;
+    height: 242px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .coupon::before,
+  .coupon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+  }
+  // background: #FFC3C3;
+// 
+  .coupon {
+
+      &::before {
+        left: 0;
+        background-image: radial-gradient(
+          circle at 0 50%,
+          transparent 25px,
+          #E4E5E9 26px
+        );
+      }
+      &::after {
+        right: 0;
+        background-image: radial-gradient(
+          circle at 100% 50%,
+          transparent 25px,
+          #E4E5E9 26px
+        );
+      }
+  
+  &.second {
+    &::before {
+      left: 0;
+      background-image: radial-gradient(
+        circle at 0 50%,
+        transparent 25px,
+        #FFC3C3 26px
+      );
+    }
+    &::after {
+      right: 0;
+      background-image: radial-gradient(
+        circle at 100% 50%,
+        transparent 25px,
+        #FFC3C3 26px
+      );
+    }
+}
+  }
+
+  // .coupon > div {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+  
+  .left {
+    width: 40%;
+    border-right: 2px dashed rgba(0, 0, 0, 0.13);
+    & img {
+        max-width: 139px;
+        max-height: 116px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+  }
+  
+  .right {
+    width: 60%;
+    background-image: radial-gradient(
+      circle at 100% 50%,
+      transparent 25px,
+      #fff 26px
+    );
+    padding: 36px 18px;
+    & .name {
+      font-family: Poppins;
+font-size: 20px;
+font-weight: 600;
+line-height: 30px;
+letter-spacing: -0.05em;
+text-align: left;
+
+    }
+    & .sub-name {
+      font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.05em;
+text-align: left;
+
+    }
+    & .view-offers {
+      font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: left;
+color: #FE3152;
+
+    }
+    & .offer {
+      margin: 30px 0;
+      &-one {
+        font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: -0.05em;
+text-align: left;
+      }
+
+&-two {
+  font-family: Poppins;
+font-size: 20px;
+font-weight: 600;
+line-height: 30px;
+letter-spacing: -0.05em;
+text-align: left;
+}
+
+&-three {
+  font-family: Poppins;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: -0.05em;
+text-align: left;
+}
+
+    }
+  }
+  
+  
+  @media screen and (max-width:500px){
+    .coupon {
+      display:grid;
+      grid-template-columns:1fr;
+    }
+    .left div {
+      transform: rotate(0deg);
+    }
+    .right div {
+      transform: rotate(0deg);
+      
+    }
+  }

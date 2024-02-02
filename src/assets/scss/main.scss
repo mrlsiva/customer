@@ -139,3 +139,18 @@ div, span, .mat-step-text-label {
         position: inherit;
     }
 }
+.bullet-dots {
+    margin-top: 20px;
+    &-icons {
+        width: 17px;
+        height: 10px;
+        border-radius: 28px;
+        border: 1px solid #FE3152;
+        background: var(--white, #FFF);
+        cursor: pointer;
+        &.active {
+            width: 78px;
+            background: #FE3152;
+        }
+    }
+}

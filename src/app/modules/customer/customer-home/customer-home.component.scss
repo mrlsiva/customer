@@ -13,115 +13,44 @@
         max-height: 100vh;
         overflow: auto;
     }
-    & .nav-bar {
+    & .search {
         width: 100%;
-        max-width: 1280px;
-        margin: 0 auto;
-        min-height: 132px;
+        max-width: 488px;
+        background-color: #fff;
+        box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+        padding: 16px 24px;
+        & input {
+            outline: none;
+            border: 0;
+            width: 100%;
+        }
+        &-icon{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #18A0FB;
+
+        }
+    }
+    & .earn {
+        color: #343434;
+        font-size: 55px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 64px;
+        letter-spacing: -2.75px;
         @include breakpoint("xs") {
-            min-height: 86px;
-            padding: 0 16px;
-            max-width: calc(100% - 32px);
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: -1.2px;
         }
         @include breakpoint("sm") {
-            min-height: 86px;
-            padding: 0 16px;
-            max-width: calc(100% - 32px);
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: -1.2px;
         }
-        & .logo {
-            & svg {
-                width: 133px;
-                margin-right: 79px;
-                @include breakpoint("xs") {
-                    width: 67px;
-                }
-                @include breakpoint("sm") {
-                    width: 67px;
-                }
-            }
-            & .nav {
-                &-items {
-                    color: var(--Black-text, #343434);
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    cursor: pointer;
-                    &:hover {
-                        color: #FE3152;
-                    }
-                    &.active {
-                        font-weight: 700;
-                        color: #FE3152;
-                    }
-                }
-            }
-            & .mobile-location {
-                & svg {
-                    width: 6px;
-                }
-                & span {
-                    color: var(--Dark-Grey, #606060);
-                    font-size: 10px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                }
-            }
-        }
-        & .buttons {
-            & button {
-                height: 50px;
-                padding: 0 20px;
-                background-color: transparent;
-                outline: none;
-                border: none;
-                cursor: pointer;
-                border-radius: 8px;
-                color: #696969;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                letter-spacing: 0.32px;
-                @include breakpoint("xs") {
-                    height: 28px;
-                    padding: 0 10px;
-                    border-radius: 4px;
-                }
-                @include breakpoint("sm") {
-                    height: 28px;
-                    padding: 0 10px;
-                    border-radius: 4px;
-                }
-                &.sign-in {
-                    background: #FE3152;
-                    border: 1px solid #FE3152;
-                    color: #FFF;
-                    text-align: center;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                    @include breakpoint("xs") {
-                        font-size: 12px;
-                        font-weight: 500;
-                        letter-spacing: -0.48px;
-                    }
-                    @include breakpoint("sm") {
-                        font-size: 12px;
-                        font-weight: 500;
-                        letter-spacing: -0.48px;
-                    }
-                }
-                &.location {
-                    border: 1px solid #696969;
-                }
-                & img {
-                    width: 35px;
-                    height: 35px;
-                }
-            }
+        &.reward {
+            color: #FE3152;
         }
     }
     & .banner {
@@ -308,27 +237,7 @@
                 font-size: 12px;
             }
         }
-        & .earn {
-            color: #343434;
-            font-size: 55px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 64px;
-            letter-spacing: -2.75px;
-            @include breakpoint("xs") {
-                font-size: 24px;
-                line-height: 24px;
-                letter-spacing: -1.2px;
-            }
-            @include breakpoint("sm") {
-                font-size: 24px;
-                line-height: 24px;
-                letter-spacing: -1.2px;
-            }
-            &.reward {
-                color: #FE3152;
-            }
-        }
+        
     }
     & .mobile-app {
         background: #FFF0F3;
@@ -660,4 +569,230 @@ letter-spacing: -1px;
 }
         }
     }
+}
+.prod {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    &uct {
+        border-radius: 4px;
+        background: #ECF2F7;
+        width: fit-content;
+        padding: 16px 24px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &.active {
+            border-radius: 4px;
+            border: 1px solid #0078C9;
+            background: #CBEAFF;
+        }
+        &-name {
+            color: #7B8389;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%;
+        }
+    }
+}
+.hot-deals {
+    background-color: #FFF0F3;
+    padding: 30px 0;
+    & .bullet {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+.deal {
+    padding-bottom: 42px;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 53px;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: #FE3152;
+& span {
+
+
+    font-family: Poppins;
+font-size: 30px;
+font-weight: 500;
+line-height: 45px;
+letter-spacing: -0.05em;
+text-align: center;
+color: #343434;
+}
+&-slider {
+max-width: 100%;
+overflow-x: hidden;
+padding-bottom: 20px;
+// &::-webkit-scrollbar {
+//     display: none;
+//   }
+&.ticket {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    & .ticket-slider {
+        min-width: calc(50% - 18px);
+        width: calc(50% - 18px);
+    }
+}
+}
+
+&-poster {
+    width: 375px;
+    min-width: 375px;
+    max-width: 375px;
+    height: 375px;
+    max-height: 375px;
+    min-height: 375px;
+    overflow: hidden;
+    border-radius: 20px;
+    & img{
+        min-height: 100%;
+        min-width: 100%;
+        max-height: 100%;
+    }
+}
+}
+.brands-grid {
+    padding-top: 42px;
+    // padding-bottom: 100px;
+    width: 100%;
+    &.mb-50 {
+        margin-bottom: 50px;
+    }
+    h3 {
+    color: #343434;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    margin-bottom: 58px;
+    }
+}
+
+.brand-grid {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    & .search {
+        border-radius: 8px;
+background: #FFF;
+    }
+    &-1 {
+        width: calc(33.3% - 51px);
+        height: 375px;
+        flex-shrink: 0;
+        border-radius: 24px;
+        margin-bottom: 77px;
+        border: 1px solid #C1C1C1;
+        box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        &:nth-child(3n) {
+            margin-right: 0 !important;
+        }
+        & .explore-more {
+            color: #343434;
+text-align: center;
+font-family: Poppins;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -1.1px;
+        }
+    }
+}
+// .brand-grid-1-color{
+//     background: #E50001;
+// }
+// .brand-grid-2-color {
+//     background: #213140;
+// }
+// .brand-grid-3-color {
+//     background: #282828;
+// }
+// .brand-grid-4-color {
+//     background: #F41CB2;
+// }
+// .brand-grid-5-color {
+//     background: #ff6f61;
+// }
+// .brand-grid-6-color {
+//     background: #fef127;
+// }
+.brand-logo-main {
+    width: 132px;
+    height: 109px;
+    // padding-top: 78.9px;
+    flex-shrink: 0;
+}
+.brand-grid-footer {
+    width: 375px;
+    height: 131px;
+    border-radius: 24px;
+    background: #FFF;
+    // margin-top: 56.1px;
+    flex-shrink: 0;
+    width: 100%;
+        
+}
+.brand-footer-logo {
+    width: 100%;
+    padding: 0 36px;
+        &-img {
+        max-width: 63px;
+        min-width: 63px;
+        width: 63px;
+        height: 63px;
+        max-height: 63px;
+        min-height: 63px;
+        border-radius: 50%;
+        overflow: hidden;
+        & img {
+            max-height: 31px;
+            max-width: 100%;
+        }
+    }
+    & h3,  & h4 {
+        text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    }
+    & h3 {
+        color: #343434;
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -1.1px;
+        margin: 0;
+    }
+    & h4 {
+        color: #FE3152;
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.9px;
+        margin: 0;
+    }
+}
+qdo365-ticket-hot-deals {
+    width: 100%;
 }

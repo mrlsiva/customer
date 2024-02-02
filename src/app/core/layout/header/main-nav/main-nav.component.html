@@ -1,22 +1,34 @@
-<div class="main-nav container" fxFlex="auto" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
-    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
-        <div class="main-nav-logo" fxLayout="row" fxLayoutAlign="start center" routerLink="/home"><img src="../../../../../assets/images/LOGO-BUSINESS.svg" fxHide.md fxHide.lg fxHide.xl></div>
-        <div class="main-nav-logo" fxLayout="row" fxLayoutAlign="start center" routerLink="/home"><img src="../../../../../assets/images/logo.svg" fxHide.xs fxHide.sm></div>
-    </div>
-    <div fxLayout="row" fxLayoutGap="115px" fxLayoutGap.md="60px" fxLayoutAlign="end center" fxHide.xs fxHide.sm fxHide.md>
-        <div fxLayout="row" fxLayoutGap="60px" fxLayoutGap.md="20px" fxLayoutAlign="end center" class="menu" [ngClass]="{'aboutus' : navWhite}">
-            <div class="menu-item" routerLink="/home" routerLinkActive="active">Home</div>
-            <div class="menu-item" routerLink="/about-us" routerLinkActive="active">About Us</div>
-            <div class="menu-item" routerLink="/our-team" routerLinkActive="active">Our Team</div>
-            <div class="menu-item" routerLink="/pricing-plans" routerLinkActive="active">Pricing Plans</div>
-        </div>
-        <button class="btn fill" routerLink="/home">Partner with us</button>
-    </div>
-    <div class="mobile" fxHide.gt-sm>
-        <div class="menu-content" fxLayout="row" fxFlex="90" fxLayoutAlign.xs="start center" fxLayoutAlign.sm="start center" fxShow.xs fxShow.sm>
-            <div fxFlex="50" fxLayoutAlign="center center">
-                <button mat-icon-button (click)="toggleSidenav()"><mat-icon>menu</mat-icon></button>
+<div class="nav-bar" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="column" fxLayoutGap="6px" fxLayoutAlign="start start">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 133 44" fill="none">
+                <path d="M43.878 23.0416C43.906 22.5749 43.9212 22.1056 43.9212 21.6287C43.9421 18.781 43.3887 15.9586 42.2943 13.3313C41.1999 10.704 39.5871 8.32606 37.5531 6.34072C35.5044 4.31805 33.0766 2.72299 30.41 1.64773C25.0029 -0.549245 18.9565 -0.549245 13.5494 1.64773C10.9006 2.72397 8.4921 4.31939 6.46472 6.34072C4.39685 8.30801 2.75352 10.6806 1.63654 13.3113C-0.545512 18.6364 -0.545512 24.6107 1.63654 29.9358C2.75141 32.5707 4.39494 34.947 6.46472 36.9166C8.4921 38.9379 10.9006 40.5333 13.5494 41.6096C15.9854 42.609 18.5805 43.1611 21.211 43.2394C21.4651 43.2521 21.7192 43.2547 21.9733 43.2547H36.6967V43.2904H44V23.9777C44.0016 23.6616 43.9606 23.3467 43.878 23.0416ZM29.7518 35.4883L26.2526 31.6625C23.4082 32.7161 20.2743 32.6652 17.4653 31.5196C16.0246 30.9358 14.7148 30.0686 13.613 28.9691C12.4904 27.8966 11.5995 26.6039 10.9956 25.1714C9.80633 22.2739 9.80633 19.0221 10.9956 16.1246C11.6022 14.6957 12.4928 13.4061 13.613 12.3345C14.7162 11.2368 16.0257 10.3698 17.4653 9.78395C20.406 8.58654 23.6957 8.58654 26.6363 9.78395C28.0856 10.3687 29.4053 11.2355 30.5192 12.3345C31.6259 13.4145 32.5034 14.7081 33.0986 16.1376C33.6939 17.567 33.9946 19.1026 33.9828 20.6518C34.0013 22.202 33.7036 23.7396 33.1079 25.1699C32.5123 26.6003 31.6313 27.8932 30.5192 28.9691C30.4201 29.066 30.3185 29.1604 30.2143 29.2573L35.9115 35.4755L29.7518 35.4883Z" fill="#FE3152"/>
+                <path d="M84.4522 11.4605C83.0557 8.50345 80.901 5.96823 78.2067 4.11219C75.9858 2.58631 73.487 1.51029 70.8517 0.945037C68.0618 0.32012 63.3024 0.00510831 56.5738 0H47.5469V43.2904H58.5576C64.1972 43.2904 68.36 42.9805 71.046 42.3607C73.6106 41.7907 76.0411 40.7318 78.2042 39.242C80.8979 37.3844 83.0525 34.8485 84.4496 31.8912C85.871 28.9079 86.5809 25.5024 86.5792 21.6746C86.5775 17.8467 85.8685 14.442 84.4522 11.4605ZM71.3732 30.7393C69.2394 32.643 65.8547 33.594 61.2189 33.5923H59.2249V9.67003H61.2087C65.8461 9.67003 69.2309 10.6372 71.363 12.5716C73.4951 14.5059 74.562 17.5411 74.5637 21.6771C74.5637 25.8183 73.5002 28.839 71.3732 30.7393Z" fill="#FE3152"/>
+                <path d="M131.064 13.3045C129.967 10.6904 128.357 8.32406 126.33 6.34596C124.278 4.32135 121.845 2.72494 119.172 1.64909C113.754 -0.549698 107.695 -0.549698 102.277 1.64909C99.622 2.72591 97.2084 4.32268 95.177 6.34596C93.1108 8.31571 91.4693 10.6892 90.354 13.3198C88.1606 18.6488 88.1606 24.6315 90.354 29.9605C91.468 32.5963 93.1095 34.975 95.177 36.9496C97.2085 38.9721 99.6221 40.568 102.277 41.6439C107.681 43.8392 113.727 43.8392 119.131 41.6439C121.81 40.5572 124.254 38.9634 126.33 36.9496C129.37 33.9238 131.444 30.0598 132.287 25.8492C133.13 21.6386 132.704 17.2718 131.064 13.3045ZM118.444 30.328C116.408 32.6271 113.836 33.7767 110.726 33.7767C107.558 33.7767 104.972 32.6416 102.967 30.3714C100.962 28.1013 99.9584 25.1972 99.9567 21.6593C99.9567 18.186 100.975 15.2972 103.012 12.993C105.05 10.6889 107.621 9.53336 110.726 9.52655C113.781 9.52655 116.34 10.682 118.401 12.993C120.462 15.304 121.493 18.1877 121.495 21.6439C121.495 25.1377 120.478 28.0324 118.444 30.328Z" fill="#FE3152"/>
+                <path d="M28.3888 20.5835C28.3888 22.4229 27.8189 23.9467 26.6791 25.1549C26.131 25.7245 25.4627 26.1799 24.7172 26.4921C23.9717 26.8042 23.1652 26.9662 22.3495 26.9676C21.5337 26.969 20.7267 26.8098 19.9799 26.5002C19.2332 26.1906 18.5632 25.7374 18.0129 25.1697C16.8906 23.9731 16.3277 22.4443 16.3242 20.5835C16.3242 18.7506 16.8941 17.2293 18.0339 16.0195C18.5751 15.4453 19.2392 14.9856 19.9824 14.6709C20.7257 14.3561 21.5312 14.1934 22.346 14.1934C23.1608 14.1934 23.9663 14.3561 24.7096 14.6709C25.4528 14.9856 26.1169 15.4453 26.6581 16.0195C27.8093 17.2433 28.3888 18.7589 28.3888 20.5835Z" fill="#FE3152"/>
+            </svg>
+            <div class="mobile-location" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="6px" fxHide.md fxHide.xl fxHide.lg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none">
+                    <path d="M10 5.5C10 7.99 5.5 14 5.5 14C5.5 14 1 7.99 1 5.5C1 4.30653 1.47411 3.16193 2.31802 2.31802C3.16193 1.47411 4.30653 1 5.5 1C6.69347 1 7.83807 1.47411 8.68198 2.31802C9.52589 3.16193 10 4.30653 10 5.5Z" fill="#606060" stroke="white" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.5 7C6.32843 7 7 6.32843 7 5.5C7 4.67157 6.32843 4 5.5 4C4.67157 4 4 4.67157 4 5.5C4 6.32843 4.67157 7 5.5 7Z" fill="#606060" stroke="white" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Kormangala, Bangalore</span>
             </div>
         </div>
+        <div class="nav" fxHide.xs fxHide.sm fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="56px">
+            <div class="nav-items active">Home</div>
+            <div class="nav-items">About Us</div>
+            <div class="nav-items">Business</div>
+            <div class="nav-items">QDO Drop</div>
+        </div>
+        
+    </div>
+    
+    <div class="buttons" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="27px">
+        <button class="location" fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" fxHide.xs fxHide.sm>
+            <img src="../../../../assets/images/customer/location.svg">
+            <span>Bengaluru, India</span>
+        </button>
+       <button class="sign-in">Sign In/Sign Up</button>
     </div>
 </div>
