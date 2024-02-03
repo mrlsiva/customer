@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomerHomeComponent } from '../customer/customer-home/customer-home.component';
 import { PostLoginHomeComponent } from './post-login-home/post-login-home.component';
+import { MyOfferComponent } from './my-offer/my-offer.component';
+
 
 const routes: Routes = [
   {
@@ -11,6 +13,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: PostLoginHomeComponent,
+  },
+  {
+    path: 'my-offer',
+    component: MyOfferComponent,
   },
   
 ];

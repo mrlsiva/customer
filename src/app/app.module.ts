@@ -14,15 +14,10 @@ import { CommonLoggerService } from './core/services/logger/common-logger.servic
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SharedModule } from './shared/shared.module';
 import { CustomerHomeComponent } from './modules/customer/customer-home/customer-home.component';
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     CustomerHomeComponent,
-
 
   ],
   imports: [
