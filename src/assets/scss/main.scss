@@ -139,6 +139,10 @@ div, span, .mat-step-text-label {
         position: inherit;
     }
 }
+.white-bg {
+    background: var(--white, #FFF) !important;
+
+}
 .bullet-dots {
     margin-top: 20px;
     &-icons {

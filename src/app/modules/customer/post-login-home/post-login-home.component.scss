@@ -1,0 +1,39 @@
+@import "../../customer/customer-home/customer-home.component.scss";
+@import "../../../../assets/scss/mixins/breakpoint.scss";
+qdo365-product-quick-card {
+    border: 1px
+}
+.pb-30 {
+    padding-bottom: 50px;
+    @include breakpoint("xs") {
+        padding-bottom: 30px;
+    }
+    @include breakpoint("sm") {
+        padding-bottom: 30px;
+    }
+}
+.location {
+    padding: 80px 0;
+    @include breakpoint("xs") {
+        padding-bottom: 30px;
+    }
+    @include breakpoint("sm") {
+        padding-bottom: 30px;
+    }
+    &-items {
+        padding-bottom: 30px;
+        width: calc(33.3% - 60px);
+        @include breakpoint("md-min") {
+            &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11), &:nth-child(14) {
+                margin: 0 30px;
+            }
+        }
+        
+        @include breakpoint("xs") {
+            width: 100%;
+        }
+        @include breakpoint("sm") {
+            width: 100%;
+        }
+    }
+}

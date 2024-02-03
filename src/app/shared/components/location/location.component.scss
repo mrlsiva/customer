@@ -1,0 +1,24 @@
+.location {
+    box-shadow: 2px 2px 10px 0px #00000033;
+    padding: 25px 40px;
+    & .city {
+        font-family: Poppins;
+font-size: 22px;
+font-weight: 500;
+line-height: 33px;
+letter-spacing: -0.05em;
+text-align: center;
+color: #343434;
+
+    }
+    & .brands {
+        font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: -0.05em;
+text-align: center;
+color: #FE3152;
+
+    }
+}

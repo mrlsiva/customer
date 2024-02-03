@@ -66,10 +66,27 @@
   //   align-items: center;
   //   justify-content: center;
   // }
-  
+  .holes {
+    height: 50px;
+    width: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+
+    top: calc(50% - 25px);
+    // &-left, &-right {}
+    &-left {
+      left: 0;
+      margin-left: -25px;
+    }
+    &-right {
+      right: 0;
+      margin-right: -25px;
+    }
+  }
   .left {
     width: 40%;
-    border-right: 2px dashed rgba(0, 0, 0, 0.13);
+    // border-right: 2px dashed rgba(0, 0, 0, 0.13);
     & img {
         max-width: 139px;
         max-height: 116px;

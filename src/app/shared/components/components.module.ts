@@ -16,6 +16,9 @@ import { ReadLetterComponent } from './read-letter/read-letter.component';
 import { PaymentTermComponent } from './payment-term/payment-term.component';
 import { PaymentTermsComponent } from './payment-terms/payment-terms.component';
 import { TicketHotDealsComponent } from './ticket-hot-deals/ticket-hot-deals.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductQuickCardComponent } from './product-quick-card/product-quick-card.component';
+import { LocationComponent } from './location/location.component';
 
 
 
@@ -32,6 +35,9 @@ import { TicketHotDealsComponent } from './ticket-hot-deals/ticket-hot-deals.com
     PaymentTermComponent,
     PaymentTermsComponent,
     TicketHotDealsComponent,
+    ProductCardComponent,
+    ProductQuickCardComponent,
+    LocationComponent,
   ],
   imports: [
     CommonModule,
@@ -52,7 +58,10 @@ import { TicketHotDealsComponent } from './ticket-hot-deals/ticket-hot-deals.com
     TermsComponent,
     ReadLetterComponent,
     PaymentTermComponent,
-    TicketHotDealsComponent
+    TicketHotDealsComponent,
+    ProductCardComponent,
+    ProductQuickCardComponent,
+    LocationComponent
   ]
 })
 export class ComponentsModule { }

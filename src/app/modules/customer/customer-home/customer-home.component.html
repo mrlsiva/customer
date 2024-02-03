@@ -1,5 +1,5 @@
 <div class="customer-ui" fxLayout="column">
-    <div class="banner" fxLayout="row" fxLayoutAlign="center center" fxHide>
+    <div class="banner" fxLayout="row" fxLayoutAlign="center center">
         <div class="banner-inner" fxLayout="row" fxLayoutAlign="center center">
             <div class="banner-icon left" fxHide.xs fxHide.sm>
                 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div fxLayout="column" class="marquee-section" fxHide>
+    <div fxLayout="column" class="marquee-section">
         <div class="marquee black" fxLayout="row" fxLayoutAlign="start center">
             <marquee behavior="" direction="right"> 
                 <div class="marquee-scroll" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="28px">
@@ -70,7 +70,7 @@
             </marquee>
         </div>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="249px" fxLayoutGap.xs="14px" fxLayoutGap.sm="14px" class="prize-section" fxHide>
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="249px" fxLayoutGap.xs="14px" fxLayoutGap.sm="14px" class="prize-section">
         <div fxLayout="column" fxLayoutGap="12px" fxFlex="50" fxFlex.xs="auto" fxFlex.sm="auto">
             <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center">
                 <div class="play">PLAY & WIN</div>
@@ -129,7 +129,7 @@
             <img src="../../../../assets/images/customer/gift.png">
         </div>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="249px" fxLayoutGap.xs="14px" fxLayoutGap.sm="14px" class="prize-section" fxLayoutAlign.xs="start start" fxHide>
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="249px" fxLayoutGap.xs="14px" fxLayoutGap.sm="14px" class="prize-section" fxLayoutAlign.xs="start start">
         <div class="prize-section-img" fxLayout="column" fxFlexOrder.xs="2" fxFlexOrder.sm="2" fxFlex="50" fxFlex.xs="auto" fxFlex.sm="auto" fxLayoutAlign="start end">
             <img src="../../../../assets/images/customer/offer.png">
         </div>
@@ -167,7 +167,7 @@
             </div>
         </div>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="200px" fxLayoutGap.xs="14px" fxLayoutGap.sm="14px" class="prize-section" fxHide>
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="200px" fxLayoutGap.xs="14px" fxLayoutGap.sm="14px" class="prize-section">
         <div fxLayout="column" fxLayoutGap="12px" fxFlex="50" fxFlex.xs="auto" fxFlex.sm="auto">
             <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center" fxLayoutAlign.xs="center center" fxLayoutAlign.sm="center center">
                 <div class="play">SHARE THE LOVE</div>
@@ -203,7 +203,7 @@
             <img src="../../../../assets/images/customer/share.png">
         </div>
     </div>
-    <div class="mobile-app" fxLayout="column" fxLayoutAlign="center center" fxHide>
+    <div class="mobile-app" fxLayout="column" fxLayoutAlign="center center">
         <img src="../../../../assets/images/customer/mobile.png">
         <div class="download" fxLayout="column" fxLayoutGap.xs="12px" fxLayoutGap.sm="12px" fxLayoutAlign="center center">
             <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center center">
@@ -216,7 +216,7 @@
             </div>
         </div>
     </div>
-    <div class="winner"  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="88px" fxLayoutGap.xs="35px" fxLayoutGap.sm="35px" fxHide>
+    <div class="winner"  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="88px" fxLayoutGap.xs="35px" fxLayoutGap.sm="35px">
         <div fxLayout="column">
             <div fxLayout="row" fxLayoutGap="12px">
                 <div class="earn">QDO Drop</div>
@@ -252,7 +252,7 @@
             </div>
         </div>
     </div>
-    <div fxLayout="column" class="marquee-section" fxHide>
+    <div fxLayout="column" class="marquee-section">
         <div class="marquee black" fxLayout="row" fxLayoutAlign="start center">
             <marquee behavior="" direction="right"> 
                 <div class="marquee-scroll" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="28px">
@@ -279,7 +279,7 @@
             </marquee>
         </div>
     </div>
-    <section class="brands-grid" fxHide>
+    <section class="brands-grid">
         <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="32px">
             <div fxLayout="row" fxLayoutGap="12px">
                 <div class="earn">Swipe into</div>
@@ -324,20 +324,7 @@
         </div>
         <div class="brand-grid" fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="77px" fxLayoutAlign="start center" >
             <div class="brand-grid-1" fxLayout="column" *ngFor="let number of [0,1,2,3,4]" style="background: #F41CB2;">
-                <div fxLayoutAlign="center center" fxFlex="242px">
-                    <img src="../../../../assets/images/brands/m-logo.svg" class="brand-logo-main">
-                </div>
-                <div class="brand-grid-footer" fxLayout="column" fxLayoutAlign="center start" fxFlex="131px">
-                    <div class="brand-footer-logo" fxLayout="row" fxLayoutGap="24px">
-                        <div class="brand-footer-logo-img" fxFlex="63px" fxLayout="column" fxLayoutAlign="center center" style="background: #F41CB2;">
-                            <img src="../../../../assets/images/brands/m-logo.svg">
-                        </div>
-                        <div fxFlex="auto" fxLayout="column" fxLayoutAlign="start start" >
-                            <h3 class="brand-nm">Mc Donalds</h3>
-                            <h4>Save upto 90%</h4>
-                        </div>
-                    </div>
-                </div>
+               <qdo365-product-card></qdo365-product-card>
             </div>
             <div class="brand-grid-1" fxLayout="column" fxLayoutAlign="center center">
                 <div class="explore-more">Explore More Brands</div>
@@ -362,7 +349,7 @@
             </div>
         </div>
     </section>
-    <section class="brands-grid mb-50" fxHide>
+    <section class="brands-grid mb-50">
         <div class="deal"> Deals <span>of the Week</span> </div>
         <div class="deal-slider" fxLayout="row" fxLayoutGap="36px">
             <div class="deal-poster" fxLayout="column" fxLayoutAlign="center center" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10]">
@@ -392,6 +379,60 @@
                     <img src="../../../../assets/images/home/deal/arrow-right.svg"/>
                 </a>
             </div>
+        </div>
+    </section>
+    <section class="banner-slider" fxLayout="column">
+        <div class="banner-slider-img">
+            <a><img src="../../../../assets/images/home/deal/banner-img.png"/></a>
+        </div>
+        <div fxFlex="calc(100% - 140px)" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="9px" class="bullet-dots">
+            <a class="bullet-dots-icons active"></a>
+            <a class="bullet-dots-icons "></a>
+            <a class="bullet-dots-icons "></a>
+            <a class="bullet-dots-icons "></a>
+        </div>
+    </section>
+    <section class="quick" fxLayout="column" fxLayoutGap="60px">
+        <div class="title" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center start" fxLayoutAlign.xs="start center" fxLayoutAlign.sm="start center" fxLayoutGap="10px">
+            <div class="title-first">Quick before it's</div>
+            <div class="title-second" fxLayout="column">
+                <div class="title-second">too late !</div>
+                <img class="underline-img" src="../../../../assets/images/partners/Underline.svg">
+            </div>
+        </div>
+        <div class="brand-grid" fxLayout="row wrap" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="77px" fxLayoutAlign="start center" >
+            <div class="brand-grid-1 quick" fxLayout="column" *ngFor="let number of [0,1,2,3,4,5]">
+               <qdo365-product-quick-card></qdo365-product-quick-card>
+            </div>
+        </div>
+    </section>
+    <section class="quick miss" fxLayout="column" fxLayoutGap="60px">
+        <div class="title" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center start" fxLayoutAlign.xs="start center" fxLayoutAlign.sm="start center" fxLayoutGap="10px">
+            <div class="title-second" fxLayout="column">
+                <div class="title-second">Brands</div>
+                <img class="underline-img" src="../../../../assets/images/partners/Underline.svg">
+            </div>
+            <div class="title-first">you shouldn't miss</div>
+            <img src="../../../../assets/images/home/deal/star.svg" height="48px">
+        </div>
+        <div class="miss-slider" fxLayout="row" fxLayoutAlign="start center">
+            <a fxFlex="64px">
+                <img src="../../../../assets/images/home/deal/arrow-left.svg" height="64px">
+            </a>
+            <div fxFlex="calc(100% - 128px)" fxLayout="row" fxLayoutGap="20px">
+                <div fxFlex="calc(33.3% - 0px)" class="miss-slider-img" *ngFor="let number of [0,1,2]">
+                    <img src="../../../../assets/images/home/deal/slider-img.png">
+                </div>
+            </div>
+            <a fxFlex="64px">
+                <img src="../../../../assets/images/home/deal/arrow-right.svg" height="64px">
+            </a>
+        </div>
+        <div fxFlex="calc(100% - 140px)" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="9px" class="bullet-dots">
+            <a class="bullet-dots-icons active"></a>
+            <a class="bullet-dots-icons "></a>
+            <a class="bullet-dots-icons "></a>
+            <a class="bullet-dots-icons "></a>
         </div>
     </section>
     <div class="winner white-bg" fxHide fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="88px" fxLayoutGap.xs="35px" fxLayoutGap.sm="35px">
