@@ -1,0 +1,10 @@
+@import '../my-offer/my-offer.component.scss';
+.product-details {
+    &-banner {
+        width: 100%;
+        & img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

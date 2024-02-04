@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomerHomeComponent } from '../customer/customer-home/customer-home.component';
 import { PostLoginHomeComponent } from './post-login-home/post-login-home.component';
 import { MyOfferComponent } from './my-offer/my-offer.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,10 @@ const routes: Routes = [
     path: 'my-offer',
     component: MyOfferComponent,
   },
-  
+  {
+    path: 'product-details',
+    component: ProductDetailsComponent,
+  },
 ];
 
 @NgModule({

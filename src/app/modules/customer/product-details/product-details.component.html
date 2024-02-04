@@ -1,14 +1,15 @@
 <div class="my-offer" fxLayout="column">
-    <div class="my-offer-profile" fxLayout="column" fxLayoutAlign="center center" >
-        <div class="name">Hey Akira,</div>
-        <div class="desc">Here is your Bag Full of Coupons</div>
+    <div class="product-details">
+        <div class="product-details-banner">
+            <img src="../.././../../assets/images/home/deal/brand.png">
+        </div>
     </div>
     <div class="my-offer-tab" fxLayout="row" fxLayoutAlign="center center" >
         <div class="tab active" fxLayout="row" fxLayoutAlign="center center">Online</div>
         <div class="tab" fxLayout="row" fxLayoutAlign="center center">In-Store</div>
     </div>
     <div class="my-offer-ticket" fxLayout="row wrap" >
-        <div class="my-offer-ticket-box" fxFlex="calc(50% - 32px)" *ngFor="let number of [0,1,2,3,4,5]">
+        <div class="my-offer-ticket-box" fxFlex="calc(50% - 32px)" *ngFor="let number of [0,1,2,3]">
             <qdo365-ticket-hot-deals></qdo365-ticket-hot-deals>
         </div>
     </div>

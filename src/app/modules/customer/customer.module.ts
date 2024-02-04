@@ -5,6 +5,7 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PostLoginHomeComponent } from './post-login-home/post-login-home.component';
 import { MyOfferComponent } from './my-offer/my-offer.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -12,6 +13,7 @@ import { MyOfferComponent } from './my-offer/my-offer.component';
   declarations: [
     PostLoginHomeComponent,
     MyOfferComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     CommonModule,
