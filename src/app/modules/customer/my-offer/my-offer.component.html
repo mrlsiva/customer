@@ -1,1 +1,16 @@
-<p>my-offer works!</p>
+<div class="my-offer" fxLayout="column">
+    <div class="my-offer-profile" fxLayout="column" fxLayoutAlign="center center" fxHide>
+        <div class="name">Hey Akira,</div>
+        <div class="desc">Here is your Bag Full of Coupons</div>
+    </div>
+    <div class="my-offer-tab" fxLayout="row" fxLayoutAlign="center center" fxHide>
+        <div class="tab active" fxLayout="row" fxLayoutAlign="center center">Online</div>
+        <div class="tab" fxLayout="row" fxLayoutAlign="center center">In-Store</div>
+    </div>
+    <div class="my-offer-ticket" fxLayout="row wrap" fxHide>
+        <div class="my-offer-ticket-box" fxFlex="calc(50% - 32px)" *ngFor="let number of [0,1,2,3,4,5]">
+            <qdo365-ticket-hot-deals></qdo365-ticket-hot-deals>
+        </div>
+    </div>
+    <qdo365-more-brands></qdo365-more-brands>
+</div>

@@ -19,6 +19,8 @@ import { TicketHotDealsComponent } from './ticket-hot-deals/ticket-hot-deals.com
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductQuickCardComponent } from './product-quick-card/product-quick-card.component';
 import { LocationComponent } from './location/location.component';
+import { MoreBrandsComponent } from './more-brands/more-brands.component';
+import { ExclusiveOfferComponent } from './exclusive-offer/exclusive-offer.component';
 
 
 
@@ -38,6 +40,8 @@ import { LocationComponent } from './location/location.component';
     ProductCardComponent,
     ProductQuickCardComponent,
     LocationComponent,
+    MoreBrandsComponent,
+    ExclusiveOfferComponent,
   ],
   imports: [
     CommonModule,
@@ -61,7 +65,9 @@ import { LocationComponent } from './location/location.component';
     TicketHotDealsComponent,
     ProductCardComponent,
     ProductQuickCardComponent,
-    LocationComponent
+    LocationComponent,
+    MoreBrandsComponent,
+    ExclusiveOfferComponent
   ]
 })
 export class ComponentsModule { }
